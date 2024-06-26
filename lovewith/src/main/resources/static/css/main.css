@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 table {
-	margin: 0 auto; /* 테이블을 가운데 정렬합니다. */
+  margin: 0 auto; /* 테이블을 가운데 정렬합니다. */
 }
 
 img {
@@ -22,12 +22,464 @@ img {
 }
 
 body {
-	background-color: pink;
+  background-color: pink;
 }
 
 a {
-	color: #ffffff; /* 하얀색 코드 */
-	font-size: 24px; /* 픽셀 단위로 크기 지정 */
-	text-decoration: none; /* 기본 밑줄 제거 */
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+  color: #ffffff; /* 하얀색 코드 */
+  font-size: 24px; /* 픽셀 단위로 크기 지정 */
+  text-decoration: none; /* 기본 밑줄 제거 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+}
+
+/* 버튼 스타일 */
+.button-container {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container .join-button {
+  background-color: #87CEEB;
+  color: white;
+}
+
+.button-container .login-button {
+  background-color: #98FB98;
+  color: white;
+}
+
+/* 모달 스타일 */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%; 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.login-form input[type="button"] {
+  width: 100%;
+  padding: 10px;
+  background: #5cb85c;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.login-form input[type="button"]:hover {
+  background: #4cae4c;
+}
+
+.forgot-password {
+  display: block;
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.forgot-password a {
+  color: #0000EE;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px; /* 글씨 크기를 조정합니다 */
+}
+
+/* 추가된 스타일 */
+.container {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.steps div {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+
+.steps div.active {
+  background-color: #87CEEB;
+  color: white;
+}
+
+.steps div.inactive {
+  background-color: white;
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.next-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #87CEEB;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.next-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* terms 클래스 스타일 추가 */
+.terms {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: scroll;
+  background-color: #f9f9f9;
+  white-space: pre-wrap; /* 텍스트 파일의 줄바꿈을 유지합니다 */
+}
+
+/*forgotPassword css*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: pink;
+}
+
+.container {
+  width: 80%; /* 너비를 더 넓게 설정 */
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+/* coupleConnect css */
+.container {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.share-code, .connect-btn {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.share-code {
+  background-color: #87CEEB;
+  color: white;
+}
+
+.connect-btn {
+  background-color: #98FB98;
+  color: white;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.verify-btn {
+  display: inline-block;
+  padding: 10px;
+  background-color: #98FB98;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.reset-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #87CEEB;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+body {
+  background-color: pink;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 10px; /* 하단 마진 조정 */
+}
+
+.header h1 {
+  margin-bottom: 20px;
+}
+
+.profiles {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.heart {
+  text-align: center;
+}
+
+.love-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.heart p {
+  font-size: 24px;
+  margin-top: 10px;
+  color: black;
+}
+
+.days {
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -20px; /* 상단 마진 조정 */
+}
+
+.footer-button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: #87CEEB;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.footer-button:hover {
+  background-color: #5aa7c7;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: pink;
+  margin: 0;
+  padding: 0;
+}
+
+.certificate-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('img/certificate-background.png'); /* 인증서 배경 이미지 */
+  background-size: cover;
+}
+
+.certificate-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.certificate-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.profile {
+  display: inline-block;
+  margin: 10px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.profile-name {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.certificate-date {
+  margin: 20px 0;
+}
+
+.birthdates {
+  margin-top: 20px;
+}
+
+.birthdates p {
+  margin: 5px 0;
 }
