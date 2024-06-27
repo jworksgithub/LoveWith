@@ -32,7 +32,25 @@ a {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
 }
 
-/* 버튼 스타일 */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+/* 홈 화면 login, join 버튼 스타일 */
 .button-container {
   display: none;
   text-align: center;
@@ -58,7 +76,7 @@ a {
   color: white;
 }
 
-/* 모달 스타일 */
+/* login 모달 스타일 */
 .modal {
   display: none; 
   position: fixed; 
@@ -128,17 +146,30 @@ a {
   color: #0000EE;
   text-decoration: underline;
   cursor: pointer;
-  font-size: 12px; /* 글씨 크기를 조정합니다 */
+  font-size: 12px; 
 }
 
-/* 추가된 스타일 */
+/* 회원가입(이용약관) css */
+body {
+  background-color: pink;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* 세로 방향으로 정렬 */
+}
 .container {
-  width: 50%;
-  margin: 0 auto;
+  width: 80%;
+  height: auto; 
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 h1 {
@@ -188,9 +219,15 @@ h1 {
   box-sizing: border-box;
 }
 
+.agree {
+  margin: 20px 0;
+}
+
+/* 완료 버튼 스타일 수정 */
 .next-btn {
   display: block;
   width: 100%;
+  max-width: 200px; 
   padding: 10px;
   background-color: #87CEEB;
   border: none;
@@ -320,6 +357,8 @@ h1 {
   margin-top: 20px;
 }
 
+
+/*Main 화면(loveIndex) css*/
 body {
   background-color: pink;
   font-family: Arial, sans-serif;
@@ -414,13 +453,14 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  text-align: center;
 }
 
 .footer-button:hover {
   background-color: #5aa7c7;
 }
 
-
+/*certificate css*/
 body {
   font-family: Arial, sans-serif;
   background-color: pink;
@@ -459,12 +499,37 @@ body {
 .profile-pic {
   width: 100px;
   height: 100px;
-  background-color: #ddd;
   border-radius: 50%;
+  background-color: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.2;
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.profile-pic span {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .profile-name {
@@ -483,3 +548,236 @@ body {
 .birthdates p {
   margin: 5px 0;
 }
+
+/* More css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center; /* 세로 정렬 추가 */
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.icon img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+}
+
+/* 메뉴 버튼 스타일 추가 */
+.menu {
+  width: 100%;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.menu-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.menu-button:hover {
+  background-color: #e9e9e9;
+}
+
+/* Event List 스타일 추가 */
+.event-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.event-header h1 {
+  font-size: 24px;
+  color: black;
+}
+
+.event-content {
+  margin: 0 auto;
+  text-align: left;
+}
+
+.event-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.event-content td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.event-content h2 {
+  display: flex;
+  align-items: center;
+}
+
+.event-content .heart {
+  margin-right: 10px;
+}
+
+.event-content a {
+  color: blue;
+  text-decoration: none;
+}
+
+.event-content a:hover {
+  text-decoration: underline;
+}
+
+/* settings.jsp 스타일 추가 */
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* qna.jsp 스타일 추가 */
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; 
+}
+
+.content {
+  text-align: center;
+  margin: 20px;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.qa-method {
+  border: 2px solid green;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.qa-method h2 {
+  margin-bottom: 20px;
+}
+
+.qa-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #87CEEB;
+  color: white;
+  cursor: pointer;
+}
+
+.qa-button:hover {
+  background-color: #5aa7c7;
+}
+
+/* 모달 스타일 추가 */
+.qamodal {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.qamodal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  max-width: 300px; 
+  text-align: center;
+}
+
+.qaclose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.qaclose:hover,
+.qaclose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*이용약관 모달*/
+ .modal-content-scroll {
+    max-height: 70vh; /* 화면 높이의 70%를 최대 높이로 설정 */
+    overflow-y: auto; /* 세로 스크롤 추가 */
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .modal-header h2 {
+    margin: 0;
+  }
+  .modal-header .close {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }

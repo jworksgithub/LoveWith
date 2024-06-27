@@ -60,6 +60,30 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('사용자 이름 또는 비밀번호가 올바르지 않습니다.');
         }
     }
+    
+    function openInquiryForm() {
+        document.getElementById('inquiryModal').style.display = 'block';
+    }
+
+    function closeInquiryForm() {
+        document.getElementById('inquiryModal').style.display = 'none';
+    }
+    
+    function openGuideModal() {
+        document.getElementById('guideModal').style.display = 'block';
+    }
+
+    function closeGuideModal() {
+        document.getElementById('guideModal').style.display = 'none';
+    }
+    
+    function openTermsModal() {
+        document.getElementById('termsModal').style.display = 'block';
+    }
+
+    function closeTermsModal() {
+        document.getElementById('termsModal').style.display = 'none';
+    }
 
     // 모달 외부 클릭 시 모달 닫기
     window.onclick = function(event) {
@@ -80,4 +104,15 @@ document.addEventListener('DOMContentLoaded', function() {
     window.openModal = openModal;
     window.closeModal = closeModal;
     window.openForgotPassword = openForgotPassword;
+    window.navigateTo = navigateTo;
+    window.openInquiryForm = openInquiryForm;  
+    window.closeInquiryForm = closeInquiryForm;
+    window.openGuideModal = openGuideModal;
+    window.closeGuideModal = closeGuideModal;
+    window.openTermsModal = openTermsModal;
+    window.closeTermsModal = closeTermsModal;
 });
+
+function navigateTo(page) {
+    window.location.href = '/' + page;
+}

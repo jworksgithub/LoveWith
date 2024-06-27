@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container full-screen">
     <h1>회원가입</h1>
     <div class="steps">
       <div class="active">이용약관</div>
@@ -18,7 +18,7 @@
     <div class="terms">
       <h3>서비스 이용약관</h3>
       <%
-        String filePath = application.getRealPath("/WEB-INF/views/terms.txt");
+        String filePath = application.getRealPath("/WEB-INF/views/Join/terms.txt");
         java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(new java.io.FileInputStream(filePath), "UTF-8"));
         String line;
         while ((line = reader.readLine()) != null) {
@@ -26,7 +26,9 @@
         }
         reader.close();
       %>
+      
     </div>
+    
     <div class="agree">
       <label><input type="checkbox" id="agreeCheckbox"> 동의</label>
       <label><input type="checkbox" id="disagreeCheckbox"> 비 동의</label>

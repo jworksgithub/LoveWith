@@ -9,7 +9,7 @@
 </head>
 <body>
   <div style="text-align: center;">
-    <img src="/img/lovewith.png" alt="로고" style="cursor: pointer;" onclick="showButtons()">
+    <img src="/img/lovewith.png" alt="로고" style="cursor: pointer;" onclick="showIndexButtons()">
   </div>
 
   <div class="button-container" id="buttonContainer" style="display:none;">
