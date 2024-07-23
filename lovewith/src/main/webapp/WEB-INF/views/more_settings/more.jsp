@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,8 +20,8 @@
       <button class="menu-button" onclick="openGuideModal()">이용 가이드</button>
       <button class="menu-button" onclick="navigateTo('info')">이용정보</button>
       <button class="menu-button" onclick="openTermsModal()">- 이용약관</button>
-      <button class="menu-button" onclick="navigateTo('privacy')">- 개인정보처리방침</button>
-      <button class="menu-button" onclick="navigateTo('logout')">로그아웃</button>
+      <button class="menu-button" onclick="openPrivacyModal()">- 개인정보처리방침</button>
+      <button class="menu-button" onclick="openLogoutModal()">로그아웃</button>
     </div>
     <div class="footer">
       <button class="footer-button" onclick="navigateTo('calendar')">Calendar</button>
@@ -34,7 +33,7 @@
   </div>
   
   <!-- 이용가이드 모달 -->
-  <div id="guideModal" class="qamodal">
+  <div id="guideModal" class="guide-modal qamodal">
     <div class="qamodal-content">
       <span class="qaclose" onclick="closeGuideModal()">&times;</span>
       <h2>Lovewith 설명서</h2>
@@ -48,7 +47,7 @@
   </div>
 
   <!-- 이용약관 모달 -->
-  <div id="termsModal" class="qamodal">
+  <div id="termsModal" class="terms-modal qamodal">
     <div class="qamodal-content modal-content-scroll">
       <div class="modal-header">
         <h2>이용약관</h2>
@@ -67,7 +66,41 @@
       </div>
     </div>
   </div>
+
+  <!-- 개인정보처리방침 모달 -->
+  <div id="privacyModal" class="privacy-modal qamodal">
+    <div class="qamodal-content modal-content-scroll">
+      <div class="modal-header">
+        <h2>개인정보처리방침</h2>
+        <span class="close" onclick="closePrivacyModal()">&times;</span>
+      </div>
+      <div id="privacyContent">
+        <%
+          String privacyFilePath = application.getRealPath("/WEB-INF/views/Join/terms_2.txt");
+          java.io.BufferedReader privacyReader = new java.io.BufferedReader(new java.io.InputStreamReader(new java.io.FileInputStream(privacyFilePath), "UTF-8"));
+          String privacyLine;
+          while ((privacyLine = privacyReader.readLine()) != null) {
+            out.println(privacyLine + "<br>");
+          }
+          privacyReader.close();
+        %>
+      </div>
+    </div>
+  </div>
   
+  <!-- 로그아웃 모달 -->
+  <div id="logoutModal" class="logout-modal qamodal">
+    <div class="qamodal-content">
+      <span class="qaclose" onclick="closeLogoutModal()">&times;</span>
+      <h2>로그아웃</h2>
+      <p>로그아웃하시겠습니까?</p>
+      <div class="modal-buttons">
+        <button class="cancel-button" onclick="closeLogoutModal()">취소</button>
+        <button class="logout-button" onclick="confirmLogout()">로그아웃</button>
+      </div>
+    </div>
+  </div>
+
   <script src="/js/app.js"></script>
 </body>
 </html>

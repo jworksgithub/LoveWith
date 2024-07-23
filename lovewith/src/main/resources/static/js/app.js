@@ -24,23 +24,20 @@ document.addEventListener('DOMContentLoaded', function() {
     var disagreeCheckbox = document.getElementById('disagreeCheckbox');
     var nextButton = document.getElementById('nextButton');
 
+    function updateNextButtonState() {
+        if (agreeCheckbox.checked && !disagreeCheckbox.checked) {
+            nextButton.disabled = false;
+        } else {
+            nextButton.disabled = true;
+        }
+    }
+
     if (agreeCheckbox) {
-        agreeCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                nextButton.disabled = false;
-            } else {
-                nextButton.disabled = true;
-            }
-        });
+        agreeCheckbox.addEventListener('change', updateNextButtonState);
     }
 
     if (disagreeCheckbox) {
-        disagreeCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                agreeCheckbox.checked = false;
-                nextButton.disabled = true;
-            }
-        });
+        disagreeCheckbox.addEventListener('change', updateNextButtonState);
     }
 
     function submitLogin() {
@@ -84,6 +81,28 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeTermsModal() {
         document.getElementById('termsModal').style.display = 'none';
     }
+    
+    function openPrivacyModal() {
+        document.getElementById('privacyModal').style.display = "block";
+    }
+
+    function closePrivacyModal() {
+        document.getElementById('privacyModal').style.display = "none";
+    }
+    
+    function openLogoutModal() {
+        document.getElementById('logoutModal').style.display = "block";
+    }
+
+    function closeLogoutModal() {
+        document.getElementById('logoutModal').style.display = "none";
+    }
+
+    function confirmLogout() {
+        // 실제 로그아웃 동작을 여기에 추가하세요
+        alert('로그아웃되었습니다.');
+        closeLogoutModal();
+    }
 
     // 모달 외부 클릭 시 모달 닫기
     window.onclick = function(event) {
@@ -98,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (logoImage) {
         logoImage.addEventListener('click', showButtons);
     }
-
     // Attach submitLogin and openModal to a global object so they can be called from the HTML
     window.submitLogin = submitLogin;
     window.openModal = openModal;
@@ -111,6 +129,11 @@ document.addEventListener('DOMContentLoaded', function() {
     window.closeGuideModal = closeGuideModal;
     window.openTermsModal = openTermsModal;
     window.closeTermsModal = closeTermsModal;
+    window.openPrivacyModal = openPrivacyModal;
+    window.closePrivacyModal = closePrivacyModal;
+    window.openLogoutModal = openLogoutModal;
+    window.closeLogoutModal = closeLogoutModal;
+    window.confirmLogout = confirmLogout;
 });
 
 function navigateTo(page) {

@@ -20,6 +20,12 @@ import io.swagger.annotations.Api;
 @Controller
 public class MainController {
 
+	@RequestMapping("/login")
+
+	    @GetMapping
+	    public String showLoginPage() {
+	        return "login/login"; // login.jsp 파일을 반환하도록 설정
+	    }
     @RequestMapping("/")
     public String index() throws Exception {
         System.out.println("hello world(refresh)");
@@ -63,12 +69,7 @@ public class MainController {
 
     @RequestMapping("/register")
     public String register() throws Exception {
-        return "register";
-    }
-
-    @RequestMapping("/verification")
-    public String verification() throws Exception {
-        return "Join/verification";
+        return "Join/register";
     }
 
     @RequestMapping("/more")
@@ -119,5 +120,6 @@ public class MainController {
     @GetMapping("/profile")
     public String profile() {
         return "main/loveIndex"; // 적절한 JSP 페이지로 리디렉션
+        
     }
 }

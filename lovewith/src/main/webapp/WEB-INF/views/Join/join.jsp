@@ -33,7 +33,7 @@
       <label><input type="checkbox" id="agreeCheckbox"> 동의</label>
       <label><input type="checkbox" id="disagreeCheckbox"> 비 동의</label>
     </div>
-    <form action="verification" method="get">
+    <form action="register" method="get">
       <button class="next-btn" id="nextButton" disabled>다음</button>
     </form>
   </div>
