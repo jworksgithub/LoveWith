@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.container {
+    text-align: center;
+    margin-top: 100px; /* 여백 조절 */
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 각 버튼별 스타일 커스터마이징 (예시) */
+.apple-button {
+    background-color: #000;
+    color: #fff;
+}
+
+.kakao-button {
+    background-color: #FFE800;
+    color: #000;
+}
