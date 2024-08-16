@@ -1,0 +1,85 @@
+/* splash */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html  {
+	height: 100%;
+	font-family: 'Arial', sans-serif;
+	/* 
+	font: 'NanumSquareRoundOTF';
+	 */
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    color: white;
+    transform: translateY(-10%); /* 콘텐츠를 약간 위로 이동 */
+}
+
+.logo-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* 로고와 텍스트 사이의 여유 공간 */
+}
+
+.text p {
+    font-size: 3rem; 
+    margin-bottom: 25px;
+}
+
+.lovewith-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* 이미지를 중앙에 배치 */
+}
+
+.text h1 {
+    font-size: 7rem; 
+    font-weight: bold;
+}
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .content {
+        transform: translateY(-5%);
+    }
+
+    .text p {
+        font-size: 3.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        transform: translateY(-3%);
+    }
+
+    .text p {
+        font-size: 3rem;
+    }
+}
