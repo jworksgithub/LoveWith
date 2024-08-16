@@ -13,7 +13,7 @@ public class MemberController {
 	 * 회원로그인
 	 *=======================*/
 	//로그인 폼
-	@GetMapping("/member/meberLogin.do")
+	@GetMapping("/member/memberLogin.do")
 	public String formLogin() throws Exception{
 		return "member/memberLogin";
 	}

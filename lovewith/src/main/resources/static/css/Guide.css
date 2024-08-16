@@ -28,45 +28,51 @@
 
 /* 기본 스타일 */
 html {
-	width: 100%;
-	max-width: 375px; /* Adjust maximum width as needed */
-	margin: 0 auto;
-	padding: 0;
 	box-sizing: border-box;
-	border: 1px solid black;
+}
+
+body {
+	width: 100%;
+	max-width: 375px;
+	min-height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	/* border: 1px solid Red; 테스트 용 */
+}
+
+header, footer {
+	position: sticky;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background-color: #FFFFFF;
+	padding: 1rem;
+	text-align: center;
+	box-sizing: border-box; /* 만약 box-sizing이 border-box로 설정되어 있지 않다면 추가 */
+	width: 100%;
+	max-width: 375px;
+	/* border: 1px solid Red; 테스트 용 */
 }
 
 header {
-	background-color: #FFFFFF;
-	padding: 20px;
-	text-align: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	max-width: 375px; /* 헤더 최대 너비 설정 */
-	margin: 0 auto; /* 헤더를 가운데 정렬 */
-	border: 1px solid black;
-}
-
-body{
-	border: 1px solid Red;
-}
-
-section {
-	padding: 20px;
-	border: 5px solid yellow;
+	top: 0; /* header는 위쪽에, footer는 아래쪽에 고정 */
 }
 
 footer {
-	background-color: #FFFFFF;
-	padding: 20px;
-	text-align: center;
-	position: fixed;
+	position: fixed; /* 또는 position: fixed; */
 	bottom: 0;
 	left: 0;
 	right: 0;
-	max-width: 375px; /* 푸터 최대 너비 설정 */
-	margin: 0 auto; /* 푸터를 가운데 정렬 */
-	border: 1px solid black;
+	margin: 0 auto;
+}
+
+.container {
+  flex-grow: 1; /* 내용 영역이 남는 공간을 채우도록 설정 */
+  /* 필요에 따라 padding이나 margin 조절 */
+}
+
+/* 뒤로가기 버튼 */
+#backButton {
+	cursor: pointer;
 }

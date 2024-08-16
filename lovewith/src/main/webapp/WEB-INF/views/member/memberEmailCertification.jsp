@@ -4,17 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>04회원가입_01이메일인증_01이메일입력_01입력전</title>
 <link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/Guide.css">
+<link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/memberEmailCertification.css">
-<script>
-	// 페이지 로드 시 실행
-	document.addEventListener('DOMContentLoaded', function() {
-		const backButton = document.getElementById('backButton');
-
-		backButton.addEventListener('click', function() {
-			history.back();
-		});
-	});
-</script>
+<script src="${pageContext.request.contextPath}/js/common.js"></script>
 </head>
 <body>
 	<header class="SUB-Header">
@@ -28,8 +21,10 @@
 		</div>
 		<div class="Frame-816197"></div>
 	</header>
-	<section>
-	
-	</section>
+	<div class="container">
+	</div>
+	<footer>
+		<button class="btn-large">계속하기</button>
+	</footer>
 </body>
 </html>

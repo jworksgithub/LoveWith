@@ -4,17 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>03로그인_02이용약관</title>
 <link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/Guide.css">
+<link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/memberAgreement.css">
-<script>
-	// 페이지 로드 시 실행
-	document.addEventListener('DOMContentLoaded', function() {
-		const backButton = document.getElementById('backButton');
-
-		backButton.addEventListener('click', function() {
-			history.back();
-		});
-	});
-</script>
+<script src="${pageContext.request.contextPath}/js/common.js"></script>
 </head>
 <body>
 	<header class="SUB-Header">
@@ -28,7 +21,7 @@
 		</div>
 		<div class="Frame-816197"></div>
 	</header>
-	<article class="main">
+	<div class="container">
 		<section class="Frame-47455">
 			<p>캘리포니아 구독자: 구독한 날짜로부터 제3영업일의 자정 전에 언제든지 위약금이나 의무 사항 없이 본 구독을
 				취소할 수 있습니다. 외부 서비스(예: Apple ID, Google Play)를 사용하여 구독하신 경우 제8조제a항에
@@ -71,6 +64,6 @@
 			<p>20. 완전한 합의</p>
 			<p>21. 특정 지역 거주자를 위한 특별 약관</p>
 		</section>
-	</article>
+	</div>
 </body>
 </html>

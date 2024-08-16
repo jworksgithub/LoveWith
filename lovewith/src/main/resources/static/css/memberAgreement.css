@@ -1,13 +1,4 @@
-body {
-	width: 80%;
-	max-width: 375px; /* Adjust maximum width as needed */
-	margin: 0 auto;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 .SUB-Header {
-	background-color: #FFFFFF;
 	padding: 16px;
 	display: flex;
 	justify-content: space-between;
@@ -15,8 +6,8 @@ body {
 }
 
 .SUB-Header-Arrow img {
-	width: 24px;
-	height: 24px;
+	width: 100%;
+	height: 100%;
 	/* seulbeom */
 	cursor: pointer;
 }
@@ -29,7 +20,7 @@ body {
 	text-align: center;
 }
 
-.main {
+.container {
 	padding: 20px;
 	font-family: NanumSquareRoundOTF;
 	font-size: 14px;
