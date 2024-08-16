@@ -24,6 +24,13 @@ public class MemberController {
 		return "member/memberAgreement";
 	}
 	
+	//이메일인증
+	@GetMapping("/member/memberEmailCertification.do")
+	public String EmailCertification() throws Exception{
+		return "member/memberEmailCertification";
+	}
+	
+	
 	/*=======================
 	 * 마이페이지
 	 *=======================*/

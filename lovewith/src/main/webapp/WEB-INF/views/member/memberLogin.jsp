@@ -47,7 +47,7 @@
 				alt="Google로 시작하기">
 			<span>Google로 시작하기</span>
 		</button>
-		<button class="btn-email">
+		<button class="btn-email" onclick="location.href='${pageContext.request.contextPath}/member/memberEmailCertification.do'">
 			<img
 				src="${pageContext.request.contextPath}/img/button/icon/email.png"
 				alt="이메일">

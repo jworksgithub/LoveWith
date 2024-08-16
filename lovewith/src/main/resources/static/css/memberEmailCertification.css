@@ -1,5 +1,5 @@
 body {
-	width: 80%;
+	width: 100%;
 	max-width: 375px; /* Adjust maximum width as needed */
 	margin: 0 auto;
 	padding: 0;
@@ -27,24 +27,4 @@ body {
 	font-weight: 800;
 	line-height: 26px;
 	text-align: center;
-}
-
-.main {
-	padding: 20px;
-	font-family: NanumSquareRoundOTF;
-	font-size: 14px;
-	line-height: 24px;
-	text-align: left;
-}
-
-.Frame-47455 p {
-	font-weight: 400;
-	color: #434549;
-}
-
-.TXT {
-	font-weight: 700;
-	list-style: none;
-	text-decoration-line: underline;
-	color: #5D6066;
 }
