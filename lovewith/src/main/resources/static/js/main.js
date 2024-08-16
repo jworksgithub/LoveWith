@@ -1,5 +1,5 @@
 window.onload = function() {
 	setTimeout(function() {
 		location.href = contextPath + "/member/memberLogin.do";
-	}, 1000); // 1초 (1000밀리초 * 1)
+	}, 3000); // 3초 (1000밀리초 * 3)
 };

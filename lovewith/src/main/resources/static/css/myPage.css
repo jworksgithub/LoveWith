@@ -1,194 +1,66 @@
-/* 기본 스타일 설정 */
-body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	font-size: 18px;
-	background-color: #e9ecef;
+/* 기존 스타일 초기화 */
+html, body {
+	font-size: 16px;
 }
 
 .container {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 70px;
-	padding-top: 10px;
+	width: 100%;
+	max-width: 375px;
+	padding: 4%;
 	background-color: #FAFAFC;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
-	margin-top: 100px;
+	margin: 0 auto;
 }
 
 /* 헤더 스타일 */
-.header {
+header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 0;
-	border-bottom: 1px solid #e0e0e0;
+	padding: 10px 16px;
+	position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 375px; /* 최대 너비 설정 */
+    margin: 0 auto;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    z-index: 1000;
 }
 
-.header .title {
-	flex-grow: 1;
-	display: flex;
-	justify-content: center; /* 이미지가 중앙에 오도록 설정 */
-	align-items: center; /* 이미지가 수직으로 중앙에 오도록 설정 */
+.left-icon, .settings, .alarm {
+    flex: 1; /* 자식 요소들이 동일한 크기를 가짐 */
+    display: flex;
+    justify-content: center; /* 아이콘을 가운데 정렬 */
 }
 
-.header .title img {
-	width: 50px;
-	height: 30px;
-	margin-left: 15px;
+.SUB-Header {
+	flex: 2; /* MY 텍스트의 영역을 더 넓게 설정 */
+    display: flex;
+    justify-content: center; /* 텍스트를 가운데 정렬 */
+	width: 25px;
+	height: 26px;
+	top: 16px;
+	left: 175px;
+	gap: 0px;
+	opacity: 0px;
+	font-family: NanumSquareRoundOTF;
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 26px;
+	text-align: center;
 }
 
-.header .left-icon img {
+.left-icon img, .settings img, .alarm img {
 	width: 24px;
 	height: 24px;
-	left: 10px;
 	cursor: pointer;
-}
-
-.header .settings img {
-	width: 40px;
-	height: 35px;
-	margin-right: 10px;
-}
-
-.header .alarm img {
-	width: 30px;
-	height: 33px;
 }
 
 .settings {
-	right: 10px;
 }
 
 .alarm {
-	right: 10px;
-}
-
-/* 프로필 섹션 스타일 */
-.profile {
-	text-align: center;
-	margin-top: 20px;
-	position: relative;
-}
-
-.profile-img-container {
-	position: relative;
-	width: 150px; /* 프로필 이미지의 너비 */
-	height: 150px; /* 프로필 이미지의 높이 */
-	margin-left: 410px;
-}
-
-.profile-img {
-	width: 100%; /* 부모 요소의 크기에 맞춤 */
-	height: 100%; /* 부모 요소의 크기에 맞춤 */
-	border-radius: 50%; /* 원형 이미지 */
-	display: block;
-}
-
-.edit-icon {
-	position: absolute;
-	bottom: 0; /* 하단에 위치 */
-	right: 0; /* 오른쪽에 위치 */
-	width: 40px; /* 작은 아이콘 크기 */
-	height: 40px; /* 작은 아이콘 크기 */
-	border-radius: 50%; /* 원형으로 만들기 */
-	background-color: white; /* 필요 시 배경색 설정 */
-	border: 1px solid #ccc; /* 필요 시 테두리 설정 */
-}
-
-.profile-name {
-	font-size: 20px;
-	font-weight: bold;
-	display: inline-flex;
-	align-items: center;
-	margin-bottom: 5px; /* 텍스트와 아이콘을 수직으로 중앙 정렬 */
-}
-
-.U1-img {
-	margin-left: 5px; /* 아이콘과 텍스트 사이의 간격 설정 */
-	width: 35px; /* 아이콘 크기 조정 */
-	height: 35px; /* 아이콘 크기 조정 */
-}
-
-/* 옵션 섹션 스타일 */
-.options {
-	margin-top: 20px;
-}
-
-.option {
-	background-color: #FFFFFF;
-	padding: 20px; /* 내부 여백 */
-	margin-bottom: 20px; /* 하단 여백 */
-	border-radius: 10px; /* 둥근 모서리 */
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 효과 */
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-	justify-content: space-between;
-}
-
-.option img {
-	margin-right: 5px; /* 이미지와 텍스트 사이의 간격 줄이기 */
-}
-
-.option-text {
-	margin-left: 10px; /* 텍스트 시작 위치 */
-	flex-grow: 1; /* 텍스트 영역이 가능한 공간을 차지하도록 함 */
-}
-
-.option-title {
-	font-weight: bold;
-	font-size: 30px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-	display: flex;
-	align-items: center; /* 제목과 화살표 이미지를 수직 중앙 정렬 */
-}
-
-.option-description {
-	font-size: 16px;
-	color: #5D6066;
-	margin-top: 10px;
-}
-
-.U2-img {
-	width: 45px;
-	height: 45px;
-	margin-left: 0px;
-	margin-bottom: 30px
-}
-
-.A-img {
-	width: 47px;
-	height: 47px;
-	margin-bottom: 30px;
-	margin-right: 3px;
-}
-
-.Big-right {
-	float: right; /* 이미지를 오른쪽으로 정렬 */
-	margin-left: auto;
-	height: 27px;
-	width: 23px;
-	margin-top: 30px;
-}
-
-/* 계정 설정 섹션 스타일 */
-.account-settings {
-	margin-top: 20px;
-	padding: 20px; /* 내부 여백 추가 */
-	background-color: #FFFFFF; /* 하얀 배경색 */
-	border-radius: 10px; /* 둥근 모서리 */
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 효과 */
-}
-
-.account-settings-text {
-	font-size: 15px;
-	margin-bottom: 10px;
-	color: #868e96;
-	font-weight: 700;
 }
 
 .setting-item {
@@ -196,169 +68,204 @@ body {
 	display: flex;
 	align-items: center; /* 이미지와 텍스트 수직 중앙 정렬 */
 	padding: 10px 0;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #ddd; /* 아래쪽에 선 추가 */
+}
+
+.setting-item:last-child {
+	border-bottom: none; /* 마지막 항목에는 선을 없앰 */
+}
+
+/* 프로필 섹션 스타일 */
+.profile {
+	text-align: center;
+	margin-top: 80px;
+	position: relative;
+}
+
+.profile-img-container {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+.profile-img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.edit-icon {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 32px;
+	height: 32px;
+}
+
+.profile-name {
+	display: inline-flex;
+	font-size: 18px;
+	font-weight: bold;
+	align-items: center;
+}
+
+.U1-img {
+	width: 25px;
+	height: 25px;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+/* 옵션 섹션 스타일 */
+.options {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.option {
+	background-color: #FFFFFF;
+	width: 100%;
+	max-width: 335px;
+	height: 94px;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	justify-content: space-between;
+}
+
+.option img {
+	margin-right: 5px;
+}
+
+.option-text {
+	margin-left: 10px;
+	flex-grow: 1;
+}
+
+.option-title {
+	font-weight: bold;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	white-space: nowrap; /* 텍스트가 한 줄로 나오도록 설정 */
+	margin-right: 10px; /* 글씨와 > 사이의 간격 조정 */
+	width: 100%;
+}
+
+.option-description {
+	font-size: 12px;
+	color: #5D6066;
+	margin-top: 5px;
+}
+
+.U2-img, .A-img {
+	width: 23px;
+	height: 23px;
+}
+
+.Big-right {
+	margin-left: 10px; /* 텍스트와 아이콘 사이의 간격 조정 */
+	height: 18px;
+	width: 14px;
+	margin-top: 0; /* 상단 마진을 제거하여 일관되게 정렬 */
+	flex-shrink: 0; /* 아이콘이 줄어들지 않도록 설정 */
+}
+
+/* 계정 설정 섹션 스타일 */
+.account-settings {
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 335px;
+	height: auto;
+}
+
+.account-settings-text {
+	font-size: 12px;
+	margin-bottom: 5px;
+	color: #868e96;
+	font-weight: 700;
+}
+
+.setting-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 0; /* 내부 요소들 간의 간격을 줄임 */
 }
 
 .setting-item img {
-	margin-right: 10px; /* 모든 아이콘과 텍스트 사이의 간격 설정 */
+	margin-right: 10px; /* 아이콘과 텍스트 사이의 간격 */
+	height: 10px;
+	width: 10px;
 }
 
 .label {
-	margin-left: 0; /* 왼쪽 마진 제거 */
-	padding-left: 0; /* 왼쪽 패딩 제거 */
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 12px;
 	color: #868e96;
+	margin-right: auto; /* 라벨을 왼쪽으로 정렬 */
 }
 
 .value {
-	font-size: 18px;
+	font-size: 10px;
 	color: #643EF8;
 	text-align: right;
-	margin-left: auto;
-	margin-right: 20px;
+	margin-left: 10px;
+	margin-right: 5px;
 	font-weight: 530;
 }
-
 /* 반응형 스타일 */
-@media ( max-width : 768px) {
-	.container {
-		max-width: 90%;
-		padding: 10px;
+@media ( max-width : 767px) {
+	.header {
+		justify-content: space-between;
 	}
 	.profile-img-container {
 		width: 120px;
 		height: 120px;
 	}
 	.option-title {
-		font-size: 16px;
+		font-size: 14px;
 	}
 	.option-description {
 		font-size: 12px;
-		margin-left: 10px;
+	}
+	.container {
+		padding: 10px;
+		height: auto; /* 모바일에서 컨테이너 높이 자동 조절 */
+	}
+	.option {
+		height: auto;
+	}
+	.account-settings {
+		padding: 15px;
 	}
 }
 
+}
 @media ( max-width : 480px) {
-	.container {
-		max-width: 100%;
-		padding: 5px;
+	.header {
+		padding: 10px;
 	}
 	.profile-img-container {
 		width: 100px;
 		height: 100px;
 	}
 	.option-title {
-		font-size: 14px;
+		font-size: 12px;
 	}
 	.option-description {
-		font-size: 12px;
-		margin-left: 5px;
+		font-size: 10px;
 	}
-}
-
-/*모달 시작*/
-/* 모달 오버레이 */
-.modal {
-	display: none; /* 기본적으로 숨겨둠 */
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* 모달 콘텐츠 */
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.4);
-	/* Modal background with opacity */
-}
-
-.modal-content {
-	background-color: white;
-	border-radius: 15px;
-	margin: 15% auto;
-	padding: 20px;
-	width: 90%;
-	max-width: 400px; /* Center and constrain width */
-	position: relative;
-	animation: fadeIn 0.3s ease; /* Optional: Adds a fade-in effect */
-}
-
-@
-keyframes fadeIn {
-	from {opacity: 0;
-}
-
-to {
-	opacity: 1;
-}
-
-}
-.modal-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 1px solid #ddd;
-	padding-bottom: 10px;
-	margin-bottom: 20px;
-}
-
-.modal-header h2 {
-	font-size: 18px;
-	margin: 0;
-}
-
-.modal-close {
-	background: none;
-	border: none;
-	font-size: 20px;
-	cursor: pointer;
-}
-
-.modal-body {
-	display: flex;
-	flex-direction: column;
-	margin-right: 20px;
-}
-
-.modal-body input {
-	width: 100%;
-	padding: 10px;
-	font-size: 16px;
-	border-radius: 10px;
-	border: 1px solid #ddd;
-	margin-bottom: 20px;
-}
-
-.modal-footer {
-	display: flex;
-	justify-content: center;
-	padding-top: 10px;
-}
-
-.modal-footer button {
-	background-color: #643EF8;
-	color: white;
-	padding: 10px 0;
-	font-size: 16px;
-	border: none;
-	border-radius: 10px;
-	width: 80%;
-	cursor: pointer;
-}
-
-.modal-footer button:hover {
-	background-color: #522bb8;
 }

@@ -4,8 +4,10 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pay Unlimited</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/payUnlimited.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/Guide.css">
 </head>
 <body>
  <div class="container">
@@ -58,19 +60,19 @@
 
 
         <div class="payment-button">
-            ₩ 15,000 결제하기
+            	결제하기
         </div>
     </div>
    
      <script>
-     <!-- back 버튼 클릭 시, myPage.jsp 창으로 이동 -->
+     //back 버튼 클릭 시, myPage.jsp 창으로 이동 
         document.getElementById("backButton").addEventListener("click", function() {
             window.location.href = "${pageContext.request.contextPath}/member/myPage";
         });
-    <!--  결제 버튼의 금액을 선택된 박스의 금액으로 변경 -->    
+    //결제 버튼의 금액을 선택된 박스의 금액으로 변경     
     // 모든 .plan 요소를 선택
-   /*
-   const plans = document.querySelectorAll('.plan');
+  
+  /*   const plans = document.querySelectorAll('.plan');
     const paymentButton = document.querySelector('.payment-button');
     let selectedPrice = '';  // 선택된 금액을 저장하는 변수
 
@@ -83,7 +85,7 @@
             // 결제 버튼의 금액을 선택된 박스의 금액으로 변경
             paymentButton.textContent = `${planPrice} 결제하기`;
 
-            <!-- 박스 선택 시, 보라색 테두리 생성 -->    
+           	// 박스 선택 시, 보라색 테두리 생성    
             // 클릭한 박스에 .selected 클래스가 있으면 제거, 없으면 추가
             plans.forEach(p => p.classList.remove('selected'));
             this.classList.add('selected');
@@ -91,8 +93,8 @@
             // 선택된 금액을 콘솔에 출력 (디버깅 용도)
             console.log('선택된 금액:', selectedPrice);
         });
-    });
- 	*/
+    });  */
+ 	
     </script>
     
 </body>
