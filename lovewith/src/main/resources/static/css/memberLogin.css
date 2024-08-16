@@ -1,28 +1,128 @@
-@charset "UTF-8";
-
-.container {
-    text-align: center;
-    margin-top: 100px; /* 여백 조절 */
+body {
+	width: 80%;
+	max-width: 1200px; /* Adjust maximum width as needed */
+	margin: 0 auto; /* Center the content horizontally */
+	padding: 0;
+	box-sizing: border-box;
+	font-family: NanumSquareRoundOTF; /* 기본 폰트 설정 */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-button {
-    display: block;
-    margin: 10px auto;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.FULL_Popup_Header {
+	width: 100%;
+	max-width: 375px; /* 최대 너비 설정 */
+	height: 56px;
+	padding: 16px 20px;
+	display: flex;
+	justify-content: flex-end; /* 헤더 요소들을 오른쪽으로 정렬 */
+	align-items: center;
+	background-color: #FFFFFF;
 }
 
-/* 각 버튼별 스타일 커스터마이징 (예시) */
-.apple-button {
-    background-color: #000;
-    color: #fff;
+#closeButton{
+	cursor: pointer;
 }
 
-.kakao-button {
-    background-color: #FFE800;
-    color: #000;
+.Logo img {
+	width: 100px;
+	height: 64px;
+	margin-bottom: 60px;
+}
+
+.BTN {
+	width: 100%;
+	max-width: 295px; /* 버튼 최대 너비 설정 */
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.btn-apple, .btn-kakao, .btn-facebook, .btn-google, .btn-email,
+	.btn-phone {
+	width: 100%;
+	height: 44px;
+	padding: 13px 12px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.btn-apple {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.btn-kakao {
+	background-color: #FEE500;
+	color: #000000;
+	border: none; /* 테두리 제거 */
+}
+
+.btn-facebook {
+	background-color: #1877F2;
+	color: #FFFFFF;
+	border: none; /* 테두리 제거 */
+}
+
+.btn-google {
+	background-color: #FFFFFF;
+	border: 1px solid #E8E9EB;
+	color: #000000;
+}
+
+.btn-email, .btn-phone {
+	background-color: #F5F6F8;
+	border: 1px solid #F5F6F8;
+	color: #000000;
+}
+
+.btn-apple img, .btn-kakao img, .btn-facebook img, .btn-google img,
+	.btn-email img, .btn-phone img {
+	width: 20px;
+	height: 20px;
+}
+
+.btn-apple span, .btn-kakao span, .btn-facebook span, .btn-google span,
+	.btn-email span, .btn-phone span {
+	font-family: NanumSquareRoundOTF;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 24px;
+}
+
+.TXT {
+	width: 100%;
+	max-width: 335px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	/* 화면 하단으로 이동 */
+	position: absolute;
+	bottom: 20px; /* 하단 여백 조절 */
+	left: 50%;
+	transform: translateX(-50%); /* 수평 가운데 정렬 */
+}
+
+.Rectangle_10090 {
+	height: 1px;
+	background-color: #E8E9EB;
+}
+
+.TXT p {
+	font-family: NanumSquareRoundOTF;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 20px;
+	text-align: center;
+	color: #96999D;
+}
+
+.TXT b {
+	color: #5D6066;
+	text-decoration: underline;
 }
