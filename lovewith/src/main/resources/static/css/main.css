@@ -1,85 +1,106 @@
-/* splash */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html  {
-	height: 100%;
-	font-family: 'Arial', sans-serif;
-	/* 
-	font: 'NanumSquareRoundOTF';
-	 */
-}
-
-.container {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-
-.background-image {
-    position: absolute;
+/*배경사진*/
+.mainbg{
+	position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    object-fit: cover; /* 이미지가 화면을 꽉 채우도록 설정 */
+    z-index: -1; /* 배경 이미지가 가장 아래에 위치하도록 설정 */
 }
-
-.content {
+html, body{
+	height:100%;
+	overflow: hidden; /* 스크롤 막기 */
+	margin: 0;
+}
+header {
+	background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1; /* 헤더가 배경 이미지 위에 위치하도록 설정 */	
+}
+.lovewithLogo{
+	height: 20px;
+}
+.QR{
+	margin-left: 120px;
+}
+.container {
+    height: 100%; 
+    display: flex;
+    flex-direction: column; /* 자식 요소들을 세로로 쌓이게 설정 */
+    justify-content: space-between; /* 자식 요소들 사이의 공간을 균등하게 배치 */
+}
+.heartImage{
+	margin-left: 17px;
+}
+.heartContainer {
     position: relative;
+    width: 100%; 
     text-align: center;
-    color: white;
-    transform: translateY(-10%); /* 콘텐츠를 약간 위로 이동 */
+}
+.heartText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.realLoveDay{
+	color: #FF4370;
+    font-weight: 700;
+    font-family: 'Bryant';
+    margin-top: -10px;
+}
+.dating{
+	color: white;
+    font-weight: 700;
+    font-family: 'Cafe24 Ssurround', serif;
+    font-size: 64px; 
+}
+.day{
+	color: white;
+    font-weight: 700;
+    font-family: 'Bryant';
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+.date{
+	color: white;
+    font-weight: 500;
+    font-family: 'Bryant';
+    font-size: 14px;
+    margin-bottom:-40px;
+}
+.lowerMiddlePart{
+	width: 70%;
+    margin-left :70px;
+    margin-bottom: 150px;
+    z-index: 3; /* 다른 요소 위에 나타나도록 설정 */
+}
+.smallHeart{
+	margin-left: 12px;
+}
+.manProfile, .womanProfile, .smallHeart{
+	z-index:5;
 }
 
-.logo-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px; /* 로고와 텍스트 사이의 여유 공간 */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명한 배경 */
+    width: 375px; 
+    height: 150px; 
+    position: absolute; /* 부모 요소 내에서 위치를 정확하게 조정 */
+    bottom: 0; /* 부모 요소의 하단에 배치 */
+    left: 0; /* 부모 요소의 좌측에 맞춤 */
+    margin-top: -5px; /* 프로필과 하트 아래에 반만 깔리도록 설정 */
+    border-radius: 24px 24px 0px 0px; /* 코너 반경 설정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    z-index: 0; /* 다른 요소 위에 나타나도록 설정 */
 }
-
-.text p {
-    font-size: 3rem; 
-    margin-bottom: 25px;
+.loveStory{
+	color: white;
+	font-weight:800;
+	font-family:'NanumSquareRoundOTF';
 }
-
-.lovewith-image {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto; /* 이미지를 중앙에 배치 */
-}
-
-.text h1 {
-    font-size: 7rem; 
-    font-weight: bold;
-}
-/* 반응형 스타일 */
-@media (max-width: 768px) {
-    .content {
-        transform: translateY(-5%);
-    }
-
-    .text p {
-        font-size: 3.6rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .content {
-        transform: translateY(-3%);
-    }
-
-    .text p {
-        font-size: 3rem;
-    }
+footer{
+	border-radius: 24px, 24px, 0px, 0px;
 }

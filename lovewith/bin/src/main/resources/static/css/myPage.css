@@ -1,0 +1,271 @@
+/* 기존 스타일 초기화 */
+html, body {
+	font-size: 16px;
+}
+
+.container {
+	width: 100%;
+	max-width: 375px;
+	padding: 4%;
+	background-color: #FAFAFC;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	margin: 0 auto;
+}
+
+/* 헤더 스타일 */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 16px;
+	position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 375px; /* 최대 너비 설정 */
+    margin: 0 auto;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    z-index: 1000;
+}
+
+.left-icon, .settings, .alarm {
+    flex: 1; /* 자식 요소들이 동일한 크기를 가짐 */
+    display: flex;
+    justify-content: center; /* 아이콘을 가운데 정렬 */
+}
+
+.SUB-Header {
+	flex: 2; /* MY 텍스트의 영역을 더 넓게 설정 */
+    display: flex;
+    justify-content: center; /* 텍스트를 가운데 정렬 */
+	width: 25px;
+	height: 26px;
+	top: 16px;
+	left: 175px;
+	gap: 0px;
+	opacity: 0px;
+	font-family: NanumSquareRoundOTF;
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 26px;
+	text-align: center;
+}
+
+.left-icon img, .settings img, .alarm img {
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+}
+
+.settings {
+}
+
+.alarm {
+}
+
+.setting-item {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center; /* 이미지와 텍스트 수직 중앙 정렬 */
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd; /* 아래쪽에 선 추가 */
+}
+
+.setting-item:last-child {
+	border-bottom: none; /* 마지막 항목에는 선을 없앰 */
+}
+
+/* 프로필 섹션 스타일 */
+.profile {
+	text-align: center;
+	margin-top: 80px;
+	position: relative;
+}
+
+.profile-img-container {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+.profile-img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.edit-icon {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 32px;
+	height: 32px;
+}
+
+.profile-name {
+	display: inline-flex;
+	font-size: 18px;
+	font-weight: bold;
+	align-items: center;
+}
+
+.U1-img {
+	width: 25px;
+	height: 25px;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+/* 옵션 섹션 스타일 */
+.options {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.option {
+	background-color: #FFFFFF;
+	width: 100%;
+	max-width: 335px;
+	height: 94px;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	justify-content: space-between;
+}
+
+.option img {
+	margin-right: 5px;
+}
+
+.option-text {
+	margin-left: 10px;
+	flex-grow: 1;
+}
+
+.option-title {
+	font-weight: bold;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	white-space: nowrap; /* 텍스트가 한 줄로 나오도록 설정 */
+	margin-right: 10px; /* 글씨와 > 사이의 간격 조정 */
+	width: 100%;
+}
+
+.option-description {
+	font-size: 12px;
+	color: #5D6066;
+	margin-top: 5px;
+}
+
+.U2-img, .A-img {
+	width: 23px;
+	height: 23px;
+}
+
+.Big-right {
+	margin-left: 10px; /* 텍스트와 아이콘 사이의 간격 조정 */
+	height: 18px;
+	width: 14px;
+	margin-top: 0; /* 상단 마진을 제거하여 일관되게 정렬 */
+	flex-shrink: 0; /* 아이콘이 줄어들지 않도록 설정 */
+}
+
+/* 계정 설정 섹션 스타일 */
+.account-settings {
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 335px;
+	height: auto;
+}
+
+.account-settings-text {
+	font-size: 12px;
+	margin-bottom: 5px;
+	color: #868e96;
+	font-weight: 700;
+}
+
+.setting-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 0; /* 내부 요소들 간의 간격을 줄임 */
+}
+
+.setting-item img {
+	margin-right: 10px; /* 아이콘과 텍스트 사이의 간격 */
+	height: 10px;
+	width: 10px;
+}
+
+.label {
+	font-weight: bold;
+	font-size: 12px;
+	color: #868e96;
+	margin-right: auto; /* 라벨을 왼쪽으로 정렬 */
+}
+
+.value {
+	font-size: 10px;
+	color: #643EF8;
+	text-align: right;
+	margin-left: 10px;
+	margin-right: 5px;
+	font-weight: 530;
+}
+/* 반응형 스타일 */
+@media ( max-width : 767px) {
+	.header {
+		justify-content: space-between;
+	}
+	.profile-img-container {
+		width: 120px;
+		height: 120px;
+	}
+	.option-title {
+		font-size: 14px;
+	}
+	.option-description {
+		font-size: 12px;
+	}
+	.container {
+		padding: 10px;
+		height: auto; /* 모바일에서 컨테이너 높이 자동 조절 */
+	}
+	.option {
+		height: auto;
+	}
+	.account-settings {
+		padding: 15px;
+	}
+}
+
+}
+@media ( max-width : 480px) {
+	.header {
+		padding: 10px;
+	}
+	.profile-img-container {
+		width: 100px;
+		height: 100px;
+	}
+	.option-title {
+		font-size: 12px;
+	}
+	.option-description {
+		font-size: 10px;
+	}
+}

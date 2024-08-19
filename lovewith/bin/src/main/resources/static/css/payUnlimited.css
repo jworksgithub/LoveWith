@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 375px;
+  padding: 3%;
+  background-color: #FAFAFC;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+#backButton{
+	position: absolute;
+	margin-left:-5px;
+	margin-top: -50px;
+	cursor: pointer;
+}
+.U2-img{
+	width: 40px;
+	height: 40px;
+}
+.pay-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* pay-title과 pay-description 사이에 간격 추가 */
+}
+
+.pay-title {
+    margin-left: 10px; /* 아이콘과 Pay Unlimited 텍스트 사이 간격 */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pay-description {
+    margin-left: 10px; 
+    color: #434549;
+    font-size: 14px;
+}
+.payment-plans{
+	margin-top: -50px;
+	margin-top: initial;
+}
+
+.plan {
+    background-color: #FFFFFF;
+    padding: 25px; /* 내부 여백 */
+    margin-bottom: 20px; /* 하단 여백 */
+    border-radius: 10px; /* 둥근 모서리 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 효과 */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.plan-info {
+    display: flex;
+    flex-direction: column;
+}
+.plan-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.plan-details {
+    font-size: 14px;
+    color: #96999D;
+}
+
+.plan-price {
+    font-weight: bold;
+    font-size: 23px;
+    color: #643EF8;
+}
+
+.summary-box {
+    background-color: #f4f2ff; /* 보라색 계열의 연한 배경색 */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px; /* 상단 여백 */
+}
+
+.summary-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left:23px;
+}
+
+.summary-details {
+    font-size: 16px;
+    color: #333;
+    margin-left: 20px; /* 글머리 기호를 위한 공간 */
+}
+
+.payment-button {
+    margin-top: -20px;
+    padding: 15px;
+    background-color: #643EF8;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.pay-header, .payment-plans, .payment-summary, .payment-button {
+    margin-top: 60px; /* 각 섹션을 아래로 이동 */
+}
+
+.selected {
+    border: 3px solid #643EF8;  /*박스 클릭 시 보라색 테두리 */
+}

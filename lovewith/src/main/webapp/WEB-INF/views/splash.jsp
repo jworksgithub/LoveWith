@@ -6,8 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Love With</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/main.css">
-<script src="${pageContext.request.contextPath}/js/main.js"></script>
+	href="${pageContext.request.contextPath}/css/splash.css">
+<script src="${pageContext.request.contextPath}/js/common.js"></script>
+<script src="${pageContext.request.contextPath}/js/splash.js"></script>
 <script>
     var contextPath = "${pageContext.request.contextPath}";
 </script>

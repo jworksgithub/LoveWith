@@ -8,7 +8,6 @@ import io.swagger.annotations.Api;
 @Api(tags="Member")
 @Controller
 public class MemberController {
-	
 	/*=======================
 	 * 회원로그인
 	 *=======================*/
@@ -24,17 +23,23 @@ public class MemberController {
 		return "member/memberAgreement";
 	}
 	
-	//이메일인증
+	// 이메일인증 (전송 전)
 	@GetMapping("/member/memberEmailCertification.do")
-	public String EmailCertification() throws Exception{
+	public String EmailCertification() throws Exception {
 		return "member/memberEmailCertification";
+	}
+
+	// 이메일인증 (전송 후)
+	@GetMapping("/member/memberSendEmail.do")
+	public String SendEmail() throws Exception {
+		return "member/memberSendEmail";
 	}
 	
 	
 	/*=======================
 	 * 마이페이지
 	 *=======================*/
-    @GetMapping("/member/myPage")
+    @GetMapping("/member/myPage.do")
     public String myPage() {
         return "member/myPage";
     }
