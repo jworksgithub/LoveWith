@@ -1,126 +1,151 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
-  width: 100%;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body{
+	border: 1px solid Red;
+	
 }
 
-.container {
-  width: 100%;
-  max-width: 375px;
-  padding: 3%;
-  background-color: #FAFAFC;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  margin: 0 auto;
+header, footer{
+	border: 1px solid Red;
+}
+header{
+	background-color: #FAFAFC;
+}
+html{
+	background-color: #FAFAFC;
+}
+.container{
+	display: flex;
+    flex-direction: column; /* 카드들을 세로로 쌓이게 함 */
+    align-items: center; /* 세로 중앙 정렬 */
 }
 #backButton{
-	position: absolute;
-	margin-left:-5px;
-	margin-top: -50px;
-	cursor: pointer;
+	margin-left:-320px;
+	margin-top: 7px;
 }
-.U2-img{
-	width: 40px;
-	height: 40px;
+.upperPart{
+	margin-top:20px;
 }
-.pay-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* pay-title과 pay-description 사이에 간격 추가 */
+.img_PayUnlimited{
+	display: flex;
+	align-items: center; /* 세로 중앙 정렬 */
 }
-
-.pay-title {
-    margin-left: 10px; /* 아이콘과 Pay Unlimited 텍스트 사이 간격 */
-    font-weight: bold;
-    font-size: 20px;
+.U-img{
+	margin-bottom: 53px;
 }
-
-.pay-description {
-    margin-left: 10px; 
-    color: #434549;
-    font-size: 14px;
+#PU{
+	margin-left: 9px;
+	margin-bottom: 53px;
+	font-family:'NanumSquareRoundOTF';
+	font-weight: 800;
+	font-size:20px;	
 }
-.payment-plans{
-	margin-top: -50px;
-	margin-top: initial;
+#text{
+	margin-top: -40px;
+	color: #434549;
+	font-family:'NanumSquareRoundOTF';
+	font-size: 16px;
 }
-
-.plan {
-    background-color: #FFFFFF;
-    padding: 25px; /* 내부 여백 */
-    margin-bottom: 20px; /* 하단 여백 */
-    border-radius: 10px; /* 둥근 모서리 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 효과 */
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    justify-content: space-between;
-}
-.plan-info {
-    display: flex;
-    flex-direction: column;
-}
-.plan-name {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.plan-details {
-    font-size: 14px;
-    color: #96999D;
+.middlePart{
+	margin-top: 5px;
 }
 
-.plan-price {
-    font-weight: bold;
-    font-size: 23px;
-    color: #643EF8;
+.A, .B, .C{
+	background-color: white;
+	border-radius: 10px; /*둥근 모서리*/
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+	font-family: 'NanumSquareRoundOTF';
+	width: 325px;
+	height: 60px;
+    display: flex;/* 자식 요소들을 가로로 배치 */
+    align-items: center; /* 세로 축에서 자식 요소들을 가운데 정렬 */
+    justify-content: space-between; /* 자식 요소 사이의 공간을 균등하게 배치 */
+    cursor:pointer;
 }
 
-.summary-box {
-    background-color: #f4f2ff; /* 보라색 계열의 연한 배경색 */
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px; /* 상단 여백 */
+.B, .C{
+	margin-top: 10px; 
 }
 
-.summary-title {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 10px;
-    margin-left:23px;
+.name{
+	font-family:'NanumSquareRoundOTF';
+	font-weight: 800;
+	font-size:14px;	
+	margin-left: 15px;
+	margin-top: 15px;
+}
+#name_2{
+	color: #96999D;
+}
+.payIndividual{
+	font-family:'NanumSquareRoundOTF';
+	font-weight: 800;
+	font-size:11px;	
+	color: #96999D;
+	margin-left: 15px;
+	margin-top: -5px;
+}
+.price_1, .price_3{
+	margin-right: 15px;
+	font-family:'NanumSquareRoundOTF';
+	font-weight:700;
+	color: #643EF8;
+}
+.price_2{
+	margin-right: 15px;
+	font-family:'NanumSquareRoundOTF';
+	font-weight:700;
+	color: #96999D;
+}
+.lowerPart{
+	background-color: #F2F0FD;
+	border: 1px solid #F2F0FD;
+	border-radius: 10px; /*둥근 모서리*/
+	margin-top: 15px;
+	width: 325px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	
+}
+#payUnlimited{
+	margin-left: 15px;
+	font-family:'NanumSquareRoundOTF';
+	font-weight:800;
+}
+.a{
+	margin-left: 10px;
+	margin-top:-12px;
+	display: flex; /* 체크 이미지와 텍스트를 가로로 나란히 배치 */
+    align-items: center; /* 체크 이미지와 텍스트를 세로 중앙 정렬 */
+}
+.b{
+	margin-left: 10px;
+	margin-bottom: 10px;
+	display: flex; /* 체크 이미지와 텍스트를 가로로 나란히 배치 */
+    align-items: center; /* 체크 이미지와 텍스트를 세로 중앙 정렬 */
+}
+.purpleCheck{
+	width: 12px;
+	margin-top:5px;
+}
+.longText{
+	color: #434549;
+	font-family:'NanumSquareRoundOTF';
+	font-size: 10px;
+	margin-left: 5px;
+	margin-top:5px;
+}
+.footerText{
+	color: white;
+	font-family:'NanumSquareRoundOTF';
+	font-size: 15px;
+	font-weight:700;
+	margin-top:2px;
+}
+footer{
+	cursor:pointer;
+	background-color: #643EF8;	
+	border: 1px solid #643EF8;
+	height:60px;
 }
 
-.summary-details {
-    font-size: 16px;
-    color: #333;
-    margin-left: 20px; /* 글머리 기호를 위한 공간 */
-}
 
-.payment-button {
-    margin-top: -20px;
-    padding: 15px;
-    background-color: #643EF8;
-    color: #FFFFFF;
-    text-align: center;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-
-.pay-header, .payment-plans, .payment-summary, .payment-button {
-    margin-top: 60px; /* 각 섹션을 아래로 이동 */
-}
-
-.selected {
-    border: 3px solid #643EF8;  /*박스 클릭 시 보라색 테두리 */
-}

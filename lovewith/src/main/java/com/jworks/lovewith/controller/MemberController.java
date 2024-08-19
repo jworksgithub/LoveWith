@@ -48,5 +48,4 @@ public class MemberController {
     public String payAnnual() {
         return "member/payAnnual"; 
     }
-
 }
