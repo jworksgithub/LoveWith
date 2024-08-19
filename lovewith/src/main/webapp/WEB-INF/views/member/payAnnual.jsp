@@ -28,22 +28,22 @@
 					<p class="name">조상철</p>
 					<p class="payIndividual">개인 결제 / Pay Individual</p>
 				</div>
-				<p class="price">₩ 4,000</p>
+				<p class="price_1">₩ 4,000</p>
 			</div>
-		</div>
 		<div class="B">
 			<div class="individualInformation">
 				<p class="name" id="name_2">김희주</p>
 				<p class="payIndividual">개인 결제 / Pay Individual</p>
 			</div>
-			<p class="price">₩ 4,000</p>
+			<p class="price_2">₩ 4,000</p>
 		</div>
 		<div class="C">
 			<div class="individualInformation">
 				<p class="name" id="name_3">조상철, 김희주</p>
 				<p class="payIndividual">함께 결제 / Pay Together</p>
 			</div>
-			<p class="price">₩ 8,000</p>
+			<p class="price_3">₩ 8,000</p>
+			</div>	
 		</div>
 		<div class="lowerPart">
 			<p id="payAnnual">Pay Annual</p>
@@ -61,7 +61,32 @@
 		</div>
 	</div>
 	<footer>
-		<p class="footerText">₩ 8,000 결제하기</p>
+		<p class="footerText" id="paymentButton"> 결제하기</p>
 	</footer>
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	    const paymentBoxes = document.querySelectorAll('.middlePart > div');
+	    const paymentButton = document.querySelector('#paymentButton');
+
+	    paymentBoxes.forEach(box => {
+	        box.addEventListener('click', function() {
+	            // 모든 박스에서 선택된 클래스 제거
+	            paymentBoxes.forEach(box => box.classList.remove('selected'));
+	            
+	            // 클릭된 박스에 선택된 클래스 추가
+	            this.classList.add('selected');
+
+	            // 클릭된 박스의 가격을 가져와 결제 버튼에 반영
+	            const priceElement = this.querySelector('p[class^="price_"]');
+	            if (priceElement) {
+	                const selectedPrice = priceElement.textContent.trim();
+	                paymentButton.innerText = `${selectedPrice} 결제하기`;
+	            }
+	        });
+	    });
+	});
+
+	</script>
+
 </body>
 </html>

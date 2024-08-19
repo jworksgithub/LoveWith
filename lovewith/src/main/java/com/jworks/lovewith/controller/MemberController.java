@@ -59,6 +59,12 @@ public class MemberController {
 		return "member/memberSuccess";
 	}
 
+	// 04회원가입_04연인정보검색_01휴대폰검색_01입력전
+	@GetMapping("/member/loverInformationSearch.do")
+	public String loverInformationSearch() throws Exception {
+		return "member/loverInformationSearch";
+	}
+
 	/*
 	 * ======================= 마이페이지 =======================
 	 */

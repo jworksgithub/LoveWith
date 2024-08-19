@@ -78,18 +78,14 @@ html {
 	margin-top: -5px;
 }
 
-.price {
+.price_1, .price_2, .price_3 {
 	margin-right: 15px;
 	font-family: 'NanumSquareRoundOTF';
 	font-weight: 700;
 	color: #643EF8;
 }
-
-.price_2 {
-	margin-right: 15px;
-	font-family: 'NanumSquareRoundOTF';
-	font-weight: 700;
-	color: #96999D;
+.price_3{
+	
 }
 
 .lowerPart {
@@ -141,7 +137,6 @@ html {
 .footerText {
 	color: white;
 	font-family:'NanumSquareRoundOTF';
-	font-size: 15px;
 	font-weight:700;
 	margin-top:-2px;
 	margin-left: 92px;
@@ -155,4 +150,19 @@ footer{
 	border-radius: 8px;
 	width:335px;
 	height:50px;
+}
+
+<!--세 개의 결제 박스 클릭 시-->
+
+.middlePart > div {
+    border: 1px solid #e0e0e0; /* 기본 테두리 색상 */
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+/* 선택된 상태의 박스 스타일 */
+.middlePart > div.selected {
+    border: 2px solid #643EF8; /* 선택된 경우 보라색 테두리 */
 }

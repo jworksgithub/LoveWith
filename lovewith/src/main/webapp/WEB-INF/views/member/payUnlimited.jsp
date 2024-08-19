@@ -30,7 +30,7 @@
 				</div>
 				<p class="price_1">₩ 15,000</p>
 			</div>
-			<div class="B">
+			<div class="B" id="disabledBox">
 				<div class="individualInformation">
 					<p class="name" id="name_2">김희주</p>
 					<p class="payIndividual">개인 결제 / Pay Individual</p>
@@ -50,7 +50,8 @@
 			<div class="aa">
 				<img class="purpleCheck"
 					src="${pageContext.request.contextPath}/img/purple_check.png"
-					alt="보라색  체크 이미지" /> <span class="longText" id="a">기간 무제한 환승 방지 효과</span>
+					alt="보라색  체크 이미지" /> <span class="longText" id="a">기간 무제한
+					환승 방지 효과</span>
 			</div>
 			<div class="bb">
 				<img class="purpleCheck"
@@ -61,7 +62,37 @@
 		</div>
 	</div>
 	<footer>
-		<p class="footerText">₩ 15,000 결제하기</p>
+		<p class="footerText" id="paymentButton">결제하기</p>
 	</footer>
+	<script>
+	function changePaymentButtonText(selectedPrice) {
+	    const paymentButton = document.getElementById('paymentButton');
+	    paymentButton.innerText = `${selectedPrice} 결제하기`;
+	}
+
+	document.addEventListener("DOMContentLoaded", function() {
+	    const paymentBoxes = document.querySelectorAll('.middlePart > div');
+
+	    paymentBoxes.forEach(box => {
+	        box.addEventListener('click', function() {
+	            if (this.id !== 'disabledBox') {
+	                paymentBoxes.forEach(box => box.classList.remove('selected'));
+	                this.classList.add('selected');
+
+	                const priceElement = this.querySelector('p[class^="price_"]');
+	                if (priceElement) {
+	                    const selectedPrice = priceElement.textContent.trim();
+	                    console.log("Selected Price:", selectedPrice);
+	                    changePaymentButtonText(selectedPrice);  // 버튼 텍스트 변경
+	                }
+	            }
+	        });
+	    });
+	});
+
+
+
+	</script>
+
 </body>
 </html>

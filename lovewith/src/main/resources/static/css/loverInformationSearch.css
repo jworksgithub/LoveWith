@@ -1,0 +1,147 @@
+/*윗부분*/
+.lis{
+	font-family: 'NanumSquareRoundOTF';
+	font-size: 22px;
+	font-weight: 800;
+	margin-left: 20px;
+}
+.lis_description{
+	font-family:'NanumSquareRoundOTF'; 
+	font-size: 14px;
+	color: #434549; 
+	margin-top:-10px;
+	margin-left: 20px;
+}
+/* 라디오 체크박스 부분 */
+.middlePart {
+    background-color: #F5F6F8;
+    border-radius: 10px;
+    width: 320px; 
+    height: 60px;
+    margin-left: 25px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row; /* 가로로 정렬 */
+    justify-content: center; /* 세로 방향으로 중앙 정렬 */
+    align-items: center; /* 가로 방향으로 중앙 정렬 */
+}
+
+.radio_1, .radio_2 {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    font-family: 'NanumSquareRoundOTF';
+    cursor: pointer;
+}
+
+.bar {
+    font-size: 15px;
+    color: #D2D3D6;
+}
+
+/* 라디오 버튼 숨기기 */
+input[type="radio"] {
+    display: none;
+}
+
+/* 커스텀 라디오 버튼 스타일 */
+.custom-radio {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #D2D3D6;
+    position: relative;
+    margin: 7px;
+}
+
+/* 선택된 라디오 버튼 스타일 */
+input[type="radio"]:checked + .custom-radio {
+    background-color: #643EF8;
+    border-color: #643EF8;
+}
+
+/* 선택된 라디오 버튼 중앙에 흰색 점 추가 */
+input[type="radio"]:checked + .custom-radio::after {
+    content: "";
+    display: block;
+    width: 12px;  /* 흰색 점 크기 */
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 중앙에 위치하게 조정 */
+    box-shadow: 0 0 0 2px #643EF8 inset; /* 선택된 라디오 버튼의 흰색 점이 테두리로 인해 중앙에 위치하도록 조정 */
+}
+/*아랫 부분*/
+.name{
+	margin-top: 35px;	
+}
+.phoneNumber{
+	margin-top: 30px;
+}
+.loverName, .loverPhoneNumber{
+	font-family: 'NanumSquareRoundOTF';
+	font-weight: 700;
+	margin-left: 20px;
+}
+.name-input {
+	margin-left: 20px;
+    width: 330px;
+    height: 40px; 
+    padding: 10px 16px 10px 16px;
+    border: 1px solid #D2D3D6; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    box-sizing: border-box; /* 패딩과 테두리를 포함한 전체 너비를 설정합니다. */
+    outline: none; /* 입력 필드가 선택될 때 나타나는 기본 외곽선을 제거합니다. */
+    background-color: #FFFFFF; /* 입력 필드의 배경색을 설정합니다. */
+    margin-bottom: 30px;
+    margin-top:10px;
+}
+.phonenumber{
+	display: flex;
+    flex-direction: row; /* 가로로 정렬 */
+	margin-left: 15px;
+}
+.country-select{
+	width:120px;
+	border: 1px solid #D2D3D6;
+	padding: 11px 12px 11px 16px;
+	border-radius: 8px;
+	box-sizing: border-box; /* 패딩과 테두리를 포함한 전체 너비를 설정합니다. */
+    outline: none; /* 입력 필드가 선택될 때 나타나는 기본 외곽선을 제거합니다. */
+    background-color: #FFFFFF; /* 입력 필드의 배경색을 설정합니다. */
+    margin-left: 20px;
+    margin-top:10px;
+}
+.phoneNumber-input{
+	margin-left: 7px;
+    width: 200px; 
+    height: 40px; 
+    padding: 10px 16px 10px 16px;
+    border: 1px solid #D2D3D6; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    box-sizing: border-box; /* 패딩과 테두리를 포함한 전체 너비를 설정합니다. */
+    outline: none; /* 입력 필드가 선택될 때 나타나는 기본 외곽선을 제거합니다. */
+    background-color: #FFFFFF; /* 입력 필드의 배경색을 설정합니다. */
+}
+.findButton{
+	margin-left: 10px;
+    width: 100%; 
+    max-width: 320px; 
+    height: 50px; 
+    background-color: #D2D3D6; 
+    color: #FFFFFF; 
+    font-family: 'NanumSquareRoundOTF';
+    font-size: 16px; 
+    font-weight: 700; 
+    border: none; 
+    border-radius: 8px; 
+    text-align: center; 
+    cursor: not-allowed; 
+}
