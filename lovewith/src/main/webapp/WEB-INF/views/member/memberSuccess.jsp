@@ -15,8 +15,8 @@
 			러브위드에 오신 것을 환영해요.</h3>
 			<p>연인을 검색하여 커플임을 확인해볼까요?</p>
 		</div>
-		<button onclick="location.href='${pageContext.request.contextPath}/member/#.do'">계속하기</button>
-		<button onclick="location.href='${pageContext.request.contextPath}/member/#.do'">다음에 하기</button>
+		<button onclick="location.href='${pageContext.request.contextPath}/main/main.do'">계속하기</button>
+		<button onclick="location.href='${pageContext.request.contextPath}/main/main.do'">다음에 하기</button>
 	</div>
 </body>
 </html>
