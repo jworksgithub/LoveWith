@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// 폼 제출 시 다른 페이지로 이동
 	document.querySelector('form').addEventListener('submit', function(event) {
 		event.preventDefault(); // 기본 폼 제출 동작 방지
-		window.location.href = contextPath + "/main/main.do"; // 이동할 페이지 URL
+		window.location.href = contextPath + "/member/memberSuccess.do"; // 이동할 페이지 URL
 	});
 
 });

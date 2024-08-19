@@ -40,12 +40,24 @@ public class MemberController {
 	public String NmRegister() throws Exception {
 		return "member/memberNmRegister";
 	}
-	
+
 	// 04회원가입_02휴대폰번호인증_01번호입력
-		@GetMapping("/member/memberPhoneCertification.do")
-		public String PhoneCertification() throws Exception {
-			return "member/memberPhoneCertification";
-		}
+	@GetMapping("/member/memberPhoneCertification.do")
+	public String PhoneCertification() throws Exception {
+		return "member/memberPhoneCertification";
+	}
+
+	// 04회원가입_02휴대폰번호인증_02인증코드입력
+	@GetMapping("/member/memberSendPhone.do")
+	public String SendPhone() throws Exception {
+		return "member/memberSendPhone";
+	}
+
+	// 04회원가입_03가입완료2
+	@GetMapping("/member/memberSuccess.do")
+	public String Success() throws Exception {
+		return "member/memberSuccess";
+	}
 
 	/*
 	 * ======================= 마이페이지 =======================

@@ -9,11 +9,17 @@
 	href="${pageContext.request.contextPath}/css/Guide.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/memberPhoneCertification.css">
+<!-- 국가별 연락처 api start -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<!-- 국가별 연락처 api end -->
 <script
 	src="${pageContext.request.contextPath}/js/memberPhoneCertification.js"></script>
 <script>
         const contextPath = "<%=request.getContextPath()%>";
-</script>
+    </script>
 </head>
 <body>
 	<div class="container">
@@ -26,12 +32,8 @@
 				<label for="countryCode">휴대폰 번호</label>
 				<div class="form-group">
 					<select id="countryCode" name="countryCode">
-						<option value="+82">KR +82</option>
-						<option value="+1">US +1</option>
-						<option value="+44">GB +44</option>
-						<option value="+81">JP +81</option>
-						<option value="+49">DE +49</option>
-						<!-- 추가 예정 -->
+						<!-- 국가 코드 포함 -->
+						<%@ include file="/WEB-INF/views/template/countryCodes.jsp"%>
 					</select> <input type="tel" id="phoneNumber" name="phoneNumber"
 						placeholder="01012345678" required />
 				</div>
