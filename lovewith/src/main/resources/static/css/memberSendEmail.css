@@ -1,27 +1,3 @@
-/* header 부분 
-=====================================*/
-.SUB-Header {
-	padding: 16px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.SUB-Header-Arrow img {
-	width: 100%;
-	height: 100%;
-	/* seulbeom */
-	cursor: pointer;
-}
-
-.SUB-Header-TXT {
-	font-family: NanumSquareRoundOTF;
-	font-size: 16px;
-	font-weight: 800;
-	line-height: 26px;
-	text-align: center;
-}
-
 /* container 부분 
 =====================================*/
 .container {

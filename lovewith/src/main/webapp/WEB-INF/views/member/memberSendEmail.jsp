@@ -23,7 +23,7 @@
 			<p>이메일 정보가 없습니다.</p>
 			<% } %>
 		</div>
-		<button onclick="location.href='${pageContext.request.contextPath}/main/main'">확인</button>
+		<button onclick="location.href='${pageContext.request.contextPath}/member/memberNmRegister.do'">확인</button>
 	</div>
 </body>
 </html>

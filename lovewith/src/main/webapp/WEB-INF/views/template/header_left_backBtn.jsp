@@ -3,10 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/Guide.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/memberSendEmail.css">
 <script src="${pageContext.request.contextPath}/js/common.js"></script>
-
 <!-- 헤더 시작 -->
 <header class="SUB-Header">
 	<div class="SUB-Header-Arrow">

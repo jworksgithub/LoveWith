@@ -23,7 +23,7 @@ public class MainController {
 	}
 	
 	//메인페이지
-	@GetMapping("/main/main")
+	@GetMapping("/main/main.do")
     public String mainPage() {
         return "main/main"; 
     }

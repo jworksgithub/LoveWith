@@ -26,7 +26,6 @@
 }
 
 /* 레이아웃 확인용 */
-/*
 body {
 	border: 1px solid Red;
 }
@@ -34,7 +33,6 @@ body {
 header, footer, .container {
 	border: 1px solid black;
 }
-*/
 
 /* 기본 스타일 */
 * {

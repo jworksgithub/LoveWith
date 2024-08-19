@@ -46,7 +46,8 @@
 					src="${pageContext.request.contextPath}/img/button/icon/email.png"
 					alt="이메일"> <span>이메일로 시작하기</span>
 			</button>
-			<button class="btn-phone">
+			<button class="btn-phone"
+				onclick="location.href='${pageContext.request.contextPath}/member/memberPhoneCertification.do'">
 				<img
 					src="${pageContext.request.contextPath}/img/button/icon/phone2.png"
 					alt="휴대폰"> <span>휴대폰으로 시작하기</span>
