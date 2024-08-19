@@ -21,7 +21,7 @@
 			<img src="${pageContext.request.contextPath}/img/SplashLogo.png"
 				alt="로고 이미지" class="logo-image">
 			<div class="text">
-				<p>우리 둘의 사랑의 서약</p>
+				<p id="text">우리 둘의 사랑의 서약</p>
 				<img
 					src="${pageContext.request.contextPath}/img/splash_lovewith.png"
 					alt="LOVE WITH 이미지" class="lovewith-image">

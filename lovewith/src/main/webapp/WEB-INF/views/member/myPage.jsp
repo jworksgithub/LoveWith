@@ -8,11 +8,14 @@
 	href="${pageContext.request.contextPath}/css/Guide.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/myPage.css">
+<script src="${pageContext.request.contextPath}/js/common.js"></script>
 </head>
 
 <body>
 	<header>
+	<a href="${pageContext.request.contextPath}/main/main">
 		<img id="backButton" src="${pageContext.request.contextPath}/img/back_icon.png" alt= "뒤로 가기"/>
+		</a>
 		<span class="myText">MY</span>
 		<img class="settingsIcon" src="${pageContext.request.contextPath}/img/settings_icon.png" alt= "환경설정"/>
 		<img class="alarmIcon" src="${pageContext.request.contextPath}/img/alarm_icon.png" alt= "알림" />
@@ -65,6 +68,7 @@
     		<span class="accountSettingsText_2">2022. 03. 04</span>
     		<img class="smallRight" src="${pageContext.request.contextPath}/img/right.png" alt= ">(클릭 시 진입)" />
     	</div>
+    </div>
     </div>
     </div>
 	<!-- 계정 설정 클릭 시 뜨는 모달  -->

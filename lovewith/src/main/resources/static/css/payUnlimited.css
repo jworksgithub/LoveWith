@@ -6,20 +6,13 @@ body{
 header, footer{
 	border: 1px solid Red;
 }
-header{
-	background-color: #FAFAFC;
-}
-html{
+header, html{
 	background-color: #FAFAFC;
 }
 .container{
 	display: flex;
     flex-direction: column; /* 카드들을 세로로 쌓이게 함 */
     align-items: center; /* 세로 중앙 정렬 */
-}
-#backButton{
-	margin-left:-320px;
-	margin-top: 7px;
 }
 .upperPart{
 	margin-top:20px;
@@ -111,41 +104,51 @@ html{
 	font-family:'NanumSquareRoundOTF';
 	font-weight:800;
 }
-.a{
-	margin-left: 10px;
+.aa{
 	margin-top:-12px;
 	display: flex; /* 체크 이미지와 텍스트를 가로로 나란히 배치 */
     align-items: center; /* 체크 이미지와 텍스트를 세로 중앙 정렬 */
+    background-color: #F2F0FD;
+    cursor: default; /* 기본 포인터 효과로 설정 */
 }
-.b{
-	margin-left: 10px;
+.bb{
 	margin-bottom: 10px;
 	display: flex; /* 체크 이미지와 텍스트를 가로로 나란히 배치 */
     align-items: center; /* 체크 이미지와 텍스트를 세로 중앙 정렬 */
+    background-color: #F2F0FD;
+    cursor: default; /* 기본 포인터 효과로 설정 */
 }
 .purpleCheck{
 	width: 12px;
 	margin-top:5px;
+	margin-left: 18px;
 }
 .longText{
 	color: #434549;
 	font-family:'NanumSquareRoundOTF';
 	font-size: 10px;
-	margin-left: 5px;
+	margin-left:5px;
 	margin-top:5px;
+}
+#a{
+	margin-left: 5px;
 }
 .footerText{
 	color: white;
 	font-family:'NanumSquareRoundOTF';
 	font-size: 15px;
 	font-weight:700;
-	margin-top:2px;
+	margin-top:-2px;
+	margin-left: 92px;
 }
 footer{
 	cursor:pointer;
+	margin-bottom: 20px; 
 	background-color: #643EF8;	
 	border: 1px solid #643EF8;
-	height:60px;
+	border-radius: 8px;
+	width:335px;
+	height:50px;
 }
 
 

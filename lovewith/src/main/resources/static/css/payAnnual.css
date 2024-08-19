@@ -1,98 +1,98 @@
-body{
-	border: 1px solid Red;
-	
+header {
+	background-color: #FAFAFC;
 }
 
-header, footer{
-	border: 1px solid Red;
-}
-header{
+html {
 	background-color: #FAFAFC;
 }
-html{
-	background-color: #FAFAFC;
-}
-.container{
+
+.container {
 	display: flex;
-    flex-direction: column; /* 카드들을 세로로 쌓이게 함 */
-    align-items: center; /* 세로 중앙 정렬 */
+	flex-direction: column; /* 카드들을 세로로 쌓이게 함 */
+	align-items: center; /* 세로 중앙 정렬 */
 }
-#backButton{
-	margin-left:-320px;
-	margint-top: 7px;
+
+.upperPart {
+	margin-top: 20px;
+	margin-left: -70px;
 }
-.upperPart{
-	margin-top:20px;
-	margin-left:-70px;
-}
-.img_PayAnnual{
+
+.img_PayAnnual {
 	display: flex;
 	align-items: center; /* 세로 중앙 정렬 */
 }
-.A-img{
+
+.A-img {
 	margin-bottom: 53px;
 }
-#PA{
+
+#PA {
 	margin-left: 9px;
 	margin-bottom: 53px;
-	font-family:'NanumSquareRoundOTF';
+	font-family: 'NanumSquareRoundOTF';
 	font-weight: 800;
-	font-size:20px;	
+	font-size: 20px;
 }
-#text{
+
+#text {
 	margin-top: -40px;
 	color: #434549;
-	font-family:'NanumSquareRoundOTF';
+	font-family: 'NanumSquareRoundOTF';
 	font-size: 16px;
 }
-.middlePart{
+
+.middlePart {
 	margin-top: 5px;
 }
 
-.A, .B, .C{
+.A, .B, .C {
 	background-color: white;
 	border-radius: 10px; /*둥근 모서리*/
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
 	font-family: 'NanumSquareRoundOTF';
 	width: 325px;
 	height: 60px;
-    display: flex;/* 자식 요소들을 가로로 배치 */
-    align-items: center; /* 세로 축에서 자식 요소들을 가운데 정렬 */
-    justify-content: space-between; /* 자식 요소 사이의 공간을 균등하게 배치 */
+	display: flex; /* 자식 요소들을 가로로 배치 */
+	align-items: center; /* 세로 축에서 자식 요소들을 가운데 정렬 */
+	justify-content: space-between; /* 자식 요소 사이의 공간을 균등하게 배치 */
 }
 
-.B, .C{
-	margin-top: 10px; 
+.B, .C {
+	margin-top: 10px;
 }
 
-.name{
-	font-family:'NanumSquareRoundOTF';
+.name {
+	font-family: 'NanumSquareRoundOTF';
 	font-weight: 800;
-	font-size:14px;	
+	font-size: 14px;
 	margin-left: 15px;
 	margin-top: 15px;
 }
-.payIndividual{
-	font-family:'NanumSquareRoundOTF';
+
+.payIndividual {
+	font-family: 'NanumSquareRoundOTF';
 	font-weight: 800;
-	font-size:11px;	
+	font-size: 11px;
 	color: #96999D;
 	margin-left: 15px;
 	margin-top: -5px;
 }
-.price{
+
+.price {
 	margin-right: 15px;
-	font-family:'NanumSquareRoundOTF';
-	font-weight:700;
+	font-family: 'NanumSquareRoundOTF';
+	font-weight: 700;
 	color: #643EF8;
 }
-.price_2{
+
+.price_2 {
 	margin-right: 15px;
-	font-family:'NanumSquareRoundOTF';
-	font-weight:700;
+	font-family: 'NanumSquareRoundOTF';
+	font-weight: 700;
 	color: #96999D;
 }
-.lowerPart{
+
+.lowerPart {
 	background-color: #F2F0FD;
 	border: 1px solid #F2F0FD;
 	border-radius: 10px; /*둥근 모서리*/
@@ -101,48 +101,58 @@ html{
 	height: 100px;
 	display: flex;
 	flex-direction: column;
-	
 }
-#payAnnual{
+
+#payAnnual {
 	margin-left: 15px;
-	font-family:'NanumSquareRoundOTF';
-	font-weight:800;
+	font-family: 'NanumSquareRoundOTF';
+	font-weight: 800;
 }
-.a{
-	margin-left: 10px;
+
+.aa {
 	margin-top:-12px;
 	display: flex; /* 체크 이미지와 텍스트를 가로로 나란히 배치 */
     align-items: center; /* 체크 이미지와 텍스트를 세로 중앙 정렬 */
-}
-.b{
-	margin-left: 10px;
+    background-color: #F2F0FD;
+    }
+
+.bb {
 	margin-bottom: 10px;
 	display: flex; /* 체크 이미지와 텍스트를 가로로 나란히 배치 */
     align-items: center; /* 체크 이미지와 텍스트를 세로 중앙 정렬 */
+    background-color: #F2F0FD;
 }
-.purpleCheck{
+
+.purpleCheck {
 	width: 12px;
-	margin-top:5px;
+	margin-top: 5px;
+	margin-left: 18px;
 }
-.longText{
+
+.longText {
 	color: #434549;
 	font-family:'NanumSquareRoundOTF';
 	font-size: 10px;
-	margin-left: 5px;
+	margin-right:150px;
 	margin-top:5px;
+	margin-left:5px;
 }
-.footerText{
+
+.footerText {
 	color: white;
 	font-family:'NanumSquareRoundOTF';
 	font-size: 15px;
 	font-weight:700;
-	margin-top:2px;
+	margin-top:-2px;
+	margin-left: 92px;
 }
+
 footer{
 	cursor:pointer;
+	margin-bottom: 20px; 
 	background-color: #643EF8;	
 	border: 1px solid #643EF8;
-	height:60px;
+	border-radius: 8px;
+	width:335px;
+	height:50px;
 }
-
-
