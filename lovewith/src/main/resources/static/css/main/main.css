@@ -5,6 +5,16 @@ header {
 	z-index: 1; /* 헤더가 배경 이미지 위에 위치하도록 설정 */
 }
 
+body {
+	background-image: url('/img/mainbg.png');
+	width: 100%;
+	max-width: 375px;
+	height: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .lovewithLogo {
 	height: 20px;
 }

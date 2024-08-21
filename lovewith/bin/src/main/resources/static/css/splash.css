@@ -1,0 +1,64 @@
+/* splash */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html  {
+	height: 100%;
+	font-family: 'Arial', sans-serif;
+	/* 
+	font: 'NanumSquareRoundOTF';
+	 */
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    color: white;
+    transform: translateY(-10%); /* 콘텐츠를 약간 위로 이동 */
+}
+
+.logo-image {
+    display: block;
+    width:300px;
+    height: auto;
+    margin-bottom: 20px; /* 로고와 텍스트 사이의 여유 공간 */
+    margin: 0 auto;
+}
+
+#text{
+    font-size: 17px; 
+    font-family:'NanumSquareRoundOTF', sarif;
+    font-weight:800;
+}
+
+.lovewith-image {
+    display: block;
+    width:200px;
+    height: auto;
+    margin: 0 auto; /* 이미지를 중앙에 배치 */
+    margin-top: 10px;
+}

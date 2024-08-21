@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>03회원가입_01이메일인증_02인증메일전송</title>
+<link rel="stylesheet" href="/css/Guide.css">
+<link rel="stylesheet" href="/css/member/sendingEmail.css">
+<script src="/js/member/sendingEmail.js"></script>
+<script src="/js/common.js"></script>
+</head>
+<body>
+	<!-- Header START -->
+	<header class="SUB-Header">
+		<div class="SUB-Header-Arrow">
+			<img id="backButton" src="/img/button/icon/Vector 8.png"
+				alt="뒤로가기 버튼" />
+		</div>
+		<div>
+			<span class="SUB-Header-TXT"></span>
+		</div>
+		<div class="Frame-816197"></div>
+	</header>
+	<!-- Header END -->
+	<!-- Container START -->
+	<div class="container">
+		<div class="TOP_TXT">
+			<h3>이메일 인증</h3>
+			<p id="messageParagraph">
+				<span id="emailAddress"></span>로 인증 메일이<br> 전송되었습니다. 수신된 링크로
+				접속하여 가입을 완료해주세요.
+			</p>
+		</div>
+		<button onclick="location.href='/views/member/nmRegister.do'">확인</button>
+	</div>
+	<!-- Container END -->
+
+</body>
+</html>

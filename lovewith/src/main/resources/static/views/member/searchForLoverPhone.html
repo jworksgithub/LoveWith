@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>04회원가입_04연인정보검색_01휴대폰검색</title>
+<link rel="stylesheet" href="/css/Guide.css">
+<link rel="stylesheet" href="/css/member/searchForLoverPhone.css">
+<script src="/js/common.js"></script>
+</head>
+<body>
+	<!-- Header START -->
+	<header class="SUB-Header">
+		<div class="SUB-Header-Arrow">
+			<img id="backButton" src="/img/button/icon/Vector 8.png"
+				alt="뒤로가기 버튼" />
+		</div>
+		<div>
+			<span class="SUB-Header-TXT"></span>
+		</div>
+		<div class="Frame-816197"></div>
+	</header>
+	<!-- Header END -->
+	<!-- Container START -->
+	<div class="container">
+		<div class="TOP_TXT">
+			<h3>연인 정보 검색</h3>
+			<p>본인의 연인에 대한 이름과 휴대폰 번호, 이메일등을 검색하여 커플 정보를 확인해주세요.</p>
+		</div>
+		<!-- Frame 816194 START -->
+		<div class="radio-container">
+			<label class="radio-option"> <input type="radio"
+				name="contact-method" value="phone" checked> <span
+				class="custom-radio"></span> <span class="label-text">휴대폰</span>
+			</label>
+			<!-- Rectangle 10091 -->
+			<div class="divider"></div>
+			<label class="radio-option"> <input type="radio"
+				name="contact-method" value="email"> <span
+				class="custom-radio"></span> <span class="label-text">이메일</span>
+			</label>
+		</div>
+		<!-- Frame 816194 END -->
+		<!-- Frame 816148 START -->
+		<div class="form-wrapper">
+			<label for="loverName">연인 이름</label> <input type="text"
+				id="loverName" required /> <label for="countryCode">휴대폰 번호</label>
+			<div class="form-group">
+				<select id="countryCode" name="countryCode">
+					<!-- 추가 예정 -->
+					<option value="+82">KR +82</option>
+					<option value="+1">US +1</option>
+					<option value="+44">GB +44</option>
+					<option value="+81">JP +81</option>
+					<option value="+49">DE +49</option>
+				</select> <input type="tel" id="phoneNumber" name="phoneNumber"
+					placeholder="01012345678" required />
+			</div>
+		</div>
+		<!-- Frame 816148 END -->
+		<button class="Button-Large" type="submit" disabled>찾아보기</button>
+	</div>
+	<!-- Container END -->
+</body>
+</html>

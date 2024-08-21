@@ -1,0 +1,198 @@
+/* container 부분 
+=====================================*/
+.container {
+	margin: 0 auto; /* 가운데 정렬 */
+	padding: 20px;
+	text-align: left;
+}
+
+.TOP_TXT {
+	font-family: NanumSquareRoundOTF;
+	width: 100%;
+	max-width: 335px;
+	height: auto;
+	min-height: 98px;
+	margin-bottom: 30px; /* radio-container랑 차이 */
+}
+
+.TOP_TXT h3 {
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 36px;
+	color: #000000;
+}
+
+.TOP_TXT p {
+	height: 52px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 26px;
+	color: #434549;
+}
+
+.radio-container {
+	display: flex;
+	justify-content: center; /* 가운데 정렬 */
+	align-items: center;
+	background-color: #F5F6F8;
+	border-radius: 10px;
+	padding: 16px 0px;
+	width: 100%;
+	max-width: 335px;
+	min-height: 60px;
+	margin-bottom: 30px;
+}
+
+.radio-option {
+	display: flex;
+	align-items: center;
+	padding: 0 20px; /* 좌우 간격을 넓게 설정 */
+}
+
+.radio-option:first-child {
+	margin-right: 10px; /* 첫 번째 옵션과 두 번째 옵션 사이에 간격 설정 */
+}
+
+.radio-option input[type="radio"] {
+	display: none;
+}
+
+.custom-radio {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%; /* 동그라미 */
+	border: 1px solid #D2D3D6;
+	margin-right: 5px;
+	position: relative;
+	background-color: #FFFFFF;
+}
+
+.radio-option input[type="radio"]:checked+.custom-radio {
+	background-color: #643EF8;
+	border-color: #643EF8;
+}
+
+.radio-option input[type="radio"]:checked+.custom-radio::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: white;
+}
+
+.label-text {
+	font-family: 'NanumSquareRoundOTF', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #000000;
+}
+
+.divider {
+	width: 1px;
+	height: 20px;
+	background-color: #D2D3D6;
+}
+
+.form-wrapper {
+	width: 100%;
+	max-width: 335px;
+	height: auto;
+	min-height: 78px;
+}
+
+.form-wrapper label {
+	display: block;
+	font-family: NanumSquareRoundOTF;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 24px;
+	color: #000000;
+	margin-bottom: 8px;
+}
+
+.form-group {
+	display: flex;
+	align-items: center;
+}
+
+#loverName {
+	display: block;
+	width: 100%;
+	max-width: 335px;
+	height: 44px;
+	padding: 10px 16px 10px 16px;
+	border-radius: 8px;
+	background: #FFFFFF;
+	border: 1px solid #D2D3D6;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+#countryCode {
+	width: 100%;
+	max-width: 116px;
+	padding: 11px 12px 11px 16px;
+	display: block;
+	height: 44px;
+	border-radius: 8px;
+	background: #FFFFFF;
+	border: 1px solid #D2D3D6;
+	border-radius: 8px;
+	margin-right: 8px;
+}
+
+#phoneNumber {
+	display: block;
+	width: 100%;
+	max-width: 211px;
+	height: 44px;
+	padding: 10px 16px 10px 16px;
+	border-radius: 8px;
+	background: #FFFFFF;
+	border: 1px solid #D2D3D6;
+	border-radius: 8px;
+}
+
+/* 포커스 되었을 때 테두리 색상 변경 */
+#loverName:focus {
+	border: 1px solid #643EF8;
+	outline: none;
+}
+
+#countryCode:focus {
+	border: 1px solid #643EF8;
+	outline: none;
+}
+
+#phoneNumber:focus {
+	border: 1px solid #643EF8;
+	outline: none;
+}
+
+.Button-Large {
+	/* 버튼 스타일 */
+	width: 100%;
+	max-width: 335px;
+	height: 52px;
+	position: fixed;
+	bottom: 20px; /* 화면 아래에서 20px 위에 위치 */
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 13px 12px 13px 12px;
+	background-color: #D2D3D6;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.Button-Large:enabled { /* 활성화된 버튼 색상 */
+	background-color: #643EF8;
+	color: white;
+}

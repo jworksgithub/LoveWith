@@ -1,271 +1,287 @@
-/* 기존 스타일 초기화 */
-html, body {
-	font-size: 16px;
+body{
+	border: 1px solid Red;
+	
 }
 
-.container {
-	width: 100%;
-	max-width: 375px;
-	padding: 4%;
+header, footer{
+	border: 1px solid Red;
 	background-color: #FAFAFC;
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
-	margin: 0 auto;
 }
-
-/* 헤더 스타일 */
-header {
+html{
+	background-color: #FAFAFC;
+}
+.container{
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 16px;
-	position: fixed;
-    top: 0;
-    width: 100%;
-    max-width: 375px; /* 최대 너비 설정 */
-    margin: 0 auto;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-    z-index: 1000;
+    flex-direction: column; /* 카드들을 세로로 쌓이게 함 */
+    align-items: center; /* 가로 중앙 정렬 */
 }
-
-.left-icon, .settings, .alarm {
-    flex: 1; /* 자식 요소들이 동일한 크기를 가짐 */
-    display: flex;
-    justify-content: center; /* 아이콘을 가운데 정렬 */
+/* header 부분*/
+header{
+	display: flex;
+    align-items: center; /* 가로 중앙 정렬 */
+ 	justify-content: space-between;
 }
-
-.SUB-Header {
-	flex: 2; /* MY 텍스트의 영역을 더 넓게 설정 */
-    display: flex;
-    justify-content: center; /* 텍스트를 가운데 정렬 */
-	width: 25px;
-	height: 26px;
-	top: 16px;
-	left: 175px;
-	gap: 0px;
-	opacity: 0px;
-	font-family: NanumSquareRoundOTF;
-	font-size: 16px;
-	font-weight: 800;
-	line-height: 26px;
-	text-align: center;
+#backButton{
+	margin-left:5px;
+	margint-top: 7px;
 }
-
-.left-icon img, .settings img, .alarm img {
+.myText{
+ 	font-family: 'NanumSquareRoundOTF';
+ 	font-size: 18px;
+ 	font-weight: 800;
+ 	margin-left: 125px;
+ 	margin-bottom: 5px;
+ 	position: relative;
+}
+.settingsIcon{
+	margin-left: 70px;
+	width:30px;
+	height:27px;
+}
+.alarmIcon{
+	margin-top: 1px;
 	width: 24px;
-	height: 24px;
-	cursor: pointer;
+	height:26px;
 }
 
-.settings {
-}
-
-.alarm {
-}
-
-.setting-item {
-	background-color: #FFFFFF;
+/*profile 부분*/
+.profile{
 	display: flex;
-	align-items: center; /* 이미지와 텍스트 수직 중앙 정렬 */
-	padding: 10px 0;
-	border-bottom: 1px solid #ddd; /* 아래쪽에 선 추가 */
+	flex-direction: column; /* 세로로 아이템 배치 */
+    align-items: center; /* 자식 요소들 가로로 중앙 정렬 */
+    justify-content: center; /* 부모 요소 내에서 세로 중앙 정렬 */
+	margin-top: 30px;
+}
+.name{
+	font-family: 'NanumSquareRoundOTF';
+ 	font-size: 18px;
+ 	font-weight: 800;
+ 	margin-top: 10px;
 }
 
-.setting-item:last-child {
-	border-bottom: none; /* 마지막 항목에는 선을 없앰 */
+/*결제 정보 부분*/
+.payUnlimited, .payAnnual{
+	background-color: white;
+	border-radius: 15px; /*둥근 모서리*/
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+	font-family: 'NanumSquareRoundOTF';
+	width: 325px;
+	height: 80px;
+    display: flex;/* 자식 요소들을 가로로 배치 */
+    align-items: center; /* 세로 축에서 자식 요소들을 가운데 정렬 */
+    justify-content: space-between; /* 자식 요소 사이의 공간을 균등하게 배치 */
+}
+.payAnnual{
+	margin-top: 10px;
 }
 
-/* 프로필 섹션 스타일 */
-.profile {
-	text-align: center;
-	margin-top: 80px;
-	position: relative;
-}
-
-.profile-img-container {
-	position: relative;
-	width: 150px;
-	height: 150px;
-	margin: 0 auto;
-}
-
-.profile-img {
-	width: 120px;
-	height: 120px;
-	border-radius: 50%;
-	display: block;
-	margin: 0 auto;
-}
-
-.edit-icon {
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	width: 32px;
-	height: 32px;
-}
-
-.profile-name {
-	display: inline-flex;
-	font-size: 18px;
-	font-weight: bold;
-	align-items: center;
-}
-
-.U1-img {
-	width: 25px;
-	height: 25px;
-	margin-left: 5px;
-	vertical-align: middle;
-}
-
-/* 옵션 섹션 스타일 */
-.options {
-	margin-top: 20px;
-	width: 100%;
-}
-
-.option {
-	background-color: #FFFFFF;
-	width: 100%;
-	max-width: 335px;
-	height: 94px;
-	padding: 20px;
-	margin-bottom: 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-	justify-content: space-between;
-}
-
-.option img {
-	margin-right: 5px;
-}
-
-.option-text {
+.UandA-Img{ 
 	margin-left: 10px;
-	flex-grow: 1;
+	margin-top: -25px;
+    width: 30px;
+    height: 30px;
 }
-
-.option-title {
-	font-weight: bold;
-	font-size: 15px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	white-space: nowrap; /* 텍스트가 한 줄로 나오도록 설정 */
-	margin-right: 10px; /* 글씨와 > 사이의 간격 조정 */
-	width: 100%;
-}
-
-.option-description {
-	font-size: 12px;
-	color: #5D6066;
+.paymentText{
+	font-family:'NanumSquareRoundOTF';
+	font-size:16px;
+	font-weight:700;
+	margin-bottom:20px;
 	margin-top: 5px;
+
+	white-space: nowrap; /*텍스트 자동 줄바꿈 방지*/
+}
+#payUnlimited{
+	margin-left: -80px;
+}
+#payAnnual{
+	margin-left: -120px;
+}
+.bigRight{
+	width: 12px;
+    height: 12px;
+     margin-right: 10px; /* 오른쪽 끝으로 정렬 */
+    cursor: pointer;
+}
+.textContainer{
+	display: flex;
+    flex-direction: column; /* 텍스트를 세로로 쌓이게 설정 */
+}
+.paymentDescription{
+	font-family:'NanumSquareRoundOTF';
+	font-size:10px;
+	font-weight:400;
+	margin-top:-10px;
+	margin-left:-35px;
+	white-space: nowrap; /*텍스트 자동 줄바꿈 방지*/
+}
+#description_1{
+	margin-left: -115px;
+}
+#description_2{
+	margin-left: -155px;
+}
+/*계정 설정*/
+.accountSettings{
+	display: flex;
+	flex-direction: column; /* 세로로 아이템 배치 */
+    justify-content: center; /* 부모 요소 내에서 세로 중앙 정렬 */
+	margin-top: 30px;
+	background-color: white;
+	border-radius: 15px; /*둥근 모서리*/
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+	display:flex;
+	font-family: 'NanumSquareRoundOTF';
+	width: 325px;
+	height: 140px;
+	margin-top:9px;
+}
+#accountSettings{
+	font-family:'NanumSquareRoundOTF';
+	font-size:11px;
+	font-weight:700;
+	color:#96999D;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.Icon{
+	width:15px;
+	height:15px;
+	margin-left: 20px;
+	margin-top:2px;
+	margin-right:5px;
 }
 
-.U2-img, .A-img {
-	width: 23px;
-	height: 23px;
-}
-
-.Big-right {
-	margin-left: 10px; /* 텍스트와 아이콘 사이의 간격 조정 */
-	height: 18px;
-	width: 14px;
-	margin-top: 0; /* 상단 마진을 제거하여 일관되게 정렬 */
-	flex-shrink: 0; /* 아이콘이 줄어들지 않도록 설정 */
-}
-
-/* 계정 설정 섹션 스타일 */
-.account-settings {
-	margin-top: 20px;
-	padding: 10px;
-	background-color: #FFFFFF;
-	border-radius: 10px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	width: 100%;
-	max-width: 335px;
-	height: auto;
-}
-
-.account-settings-text {
-	font-size: 12px;
-	margin-bottom: 5px;
-	color: #868e96;
-	font-weight: 700;
-}
-
-.setting-item {
+.contact, .email{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding: 5px 0; /* 내부 요소들 간의 간격을 줄임 */
+	margin-bottom: 7px;
+}
+.firstMeetingDate{
+	display: flex;
+	align-items: center;
+}
+.accountSettingsText_1{
+	font-family:'NanumSquareRoundOTF';
+	font-size:11px;
+	font-weight:400;
+	color:#96999D;
+	margin-right: auto; /* 텍스트를 왼쪽으로 밀어냄 */
+}
+.accountSettingsText_2{
+	font-family:'NanumSquareRoundOTF';
+	font-size:11px;
+	font-weight:700;
+	color:#643EF8;
+	margin-right:20px;
+}
+.smallRight{
+	width: 7px;
+	height:10px;
+	margin-right: 25px;
+	cursor: pointer;
 }
 
-.setting-item img {
-	margin-right: 10px; /* 아이콘과 텍스트 사이의 간격 */
-	height: 10px;
-	width: 10px;
+/*modal*/
+.modal-overlay {
+	display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
+    z-index: 999;
+}
+.modal {
+	display: none;
+    position: fixed;/* 스크롤과 상관없이 화면에 고정 */
+    bottom: 0; /* 화면 하단에 위치 */
+    width: 100%; /* 화면의 전체 너비를 차지 */
+    height: 33%;
+    background-color: white;
+    border-radius: 20px 20px 0 0; /* 상단 모서리를 둥글게 */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* 상단에 그림자 효과 */
+    z-index: 1000; /* 다른 요소들 위에 표시되도록 z-index 설정 */
+	margin: 0 auto; /* 중앙 정렬 */
+}
+.whiteBar{
+	margin-left:41%;
+}
+.close{
+	font-size:37px;
+	font-weight: 100;
+	margin-right: 15px;
+	margin-top: -5px;
+	cursor: pointer;
+}
+.modaltitleclose{
+ 	display: flex;
+ 	 justify-content: space-between; /* 제목과 닫기 버튼 사이에 공간을 균등하게 배분 */
+    align-items: center; /* 두 요소를 세로 축에서 가운데 정렬 */
+}
+.modalTitle{
+	font-family:'NanumSquareRoundOTF';
+	font-size:17px;
+	font-weight:800;
+	margin-left:15px;
+	white-space: nowrap;
+}
+.inputbutton{
+	display: flex;
+	flex-direction: column; /* 세로로 아이템 배치 */
+    justify-content: center; /* 부모 요소 내에서 세로 중앙 정렬 */
+}
+.modalInput{
+	 padding-left: 10px;
+	 border: 1px solid #D2D3D6;
+	 margin: 10px auto; 
+	 margin-top:15px;
+	 border-radius: 10px;
+	 width: 320px;
+	 height: 30px;
+}
+.modalInput::placeholder {
+    font-family: 'NanumSquareRoundOTF'; /* 플레이스홀더 텍스트의 스타일 */
+}
+.modalButton{
+	border-radius: 8px;
+	background-color: #643EF8;
+	width: 335px;
+	height: 35px;
+	margin: 10px auto; 
+	border: 1px; solid #643EF8;
+}
+.complete{
+	font-family:'NanumSquareRoundOTF';
+	font-size:15px;
+	color: white;
 }
 
-.label {
-	font-weight: bold;
-	font-size: 12px;
-	color: #868e96;
-	margin-right: auto; /* 라벨을 왼쪽으로 정렬 */
-}
 
-.value {
-	font-size: 10px;
-	color: #643EF8;
-	text-align: right;
-	margin-left: 10px;
-	margin-right: 5px;
-	font-weight: 530;
-}
-/* 반응형 스타일 */
-@media ( max-width : 767px) {
-	.header {
-		justify-content: space-between;
-	}
-	.profile-img-container {
-		width: 120px;
-		height: 120px;
-	}
-	.option-title {
-		font-size: 14px;
-	}
-	.option-description {
-		font-size: 12px;
-	}
-	.container {
-		padding: 10px;
-		height: auto; /* 모바일에서 컨테이너 높이 자동 조절 */
-	}
-	.option {
-		height: auto;
-	}
-	.account-settings {
-		padding: 15px;
-	}
-}
 
-}
-@media ( max-width : 480px) {
-	.header {
-		padding: 10px;
-	}
-	.profile-img-container {
-		width: 100px;
-		height: 100px;
-	}
-	.option-title {
-		font-size: 12px;
-	}
-	.option-description {
-		font-size: 10px;
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

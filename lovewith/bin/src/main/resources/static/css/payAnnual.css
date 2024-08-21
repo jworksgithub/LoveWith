@@ -1,113 +1,168 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    background-color: #e9ecef;
+header {
+	background-color: #FAFAFC;
 }
-.container{
-    max-width: 1000px;
-   	height: 750px;
-    margin: 0 auto;
-    padding: 90px;
-    padding-top: 10px;
-    background-color: #FAFAFC;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin-top: 100px;
+
+html {
+	background-color: #FAFAFC;
 }
-#backButton{
-	position: absolute;
-	margin-left:-50px;
-	margin-top: -30px;
+
+.container {
+	display: flex;
+	flex-direction: column; /* 카드들을 세로로 쌓이게 함 */
+	align-items: center; /* 세로 중앙 정렬 */
+}
+
+.upperPart {
+	margin-top: 20px;
+	margin-left: -70px;
+}
+
+.img_PayAnnual {
+	display: flex;
+	align-items: center; /* 세로 중앙 정렬 */
+}
+
+.A-img {
+	margin-bottom: 53px;
+}
+
+#PA {
+	margin-left: 9px;
+	margin-bottom: 53px;
+	font-family: 'NanumSquareRoundOTF';
+	font-weight: 800;
+	font-size: 20px;
+}
+
+#text {
+	margin-top: -40px;
+	color: #434549;
+	font-family: 'NanumSquareRoundOTF';
+	font-size: 16px;
+}
+
+.middlePart {
+	margin-top: 5px;
+}
+
+.A, .B, .C {
+	background-color: white;
+	border-radius: 10px; /*둥근 모서리*/
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+	font-family: 'NanumSquareRoundOTF';
+	width: 325px;
+	height: 60px;
+	display: flex; /* 자식 요소들을 가로로 배치 */
+	align-items: center; /* 세로 축에서 자식 요소들을 가운데 정렬 */
+	justify-content: space-between; /* 자식 요소 사이의 공간을 균등하게 배치 */
+}
+
+.B, .C {
+	margin-top: 10px;
+}
+
+.name {
+	font-family: 'NanumSquareRoundOTF';
+	font-weight: 800;
+	font-size: 14px;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+
+.payIndividual {
+	font-family: 'NanumSquareRoundOTF';
+	font-weight: 800;
+	font-size: 11px;
+	color: #96999D;
+	margin-left: 15px;
+	margin-top: -5px;
+}
+
+.price_1, .price_2, .price_3 {
+	margin-right: 15px;
+	font-family: 'NanumSquareRoundOTF';
+	font-weight: 700;
+	color: #643EF8;
+}
+.price_3{
 	
 }
-.A-img {
-    width: 50px ; 
-    height: 50px ;
-}
-.pay-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* pay-title과 pay-description 사이에 간격 추가 */
-}
-.pay-title {
-    margin-left: 20px; /* 아이콘과 Pay Unlimited 텍스트 사이 간격 */
-    font-weight: bold;
-    font-size: 30px;
+
+.lowerPart {
+	background-color: #F2F0FD;
+	border: 1px solid #F2F0FD;
+	border-radius: 10px; /*둥근 모서리*/
+	margin-top: 15px;
+	width: 325px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
 }
 
-.pay-description {
-    margin-left: 10px; 
-    color: #434549;
-    font-size: 20px;
-}
-.payment-plans{
-	margin-top: 20px;
+#payAnnual {
+	margin-left: 15px;
+	font-family: 'NanumSquareRoundOTF';
+	font-weight: 800;
 }
 
-.plan {
-    background-color: #FFFFFF;
-    padding: 25px; /* 내부 여백 */
-    margin-bottom: 20px; /* 하단 여백 */
-    border-radius: 10px; /* 둥근 모서리 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 효과 */
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    justify-content: space-between;
-}
-.plan-info {
-    display: flex;
-    flex-direction: column;
-}
-.plan-name {
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.plan-details {
-    font-size: 14px;
-    color: #96999D;
+.aa {
+	margin-top:-12px;
+	display: flex; /* 체크 이미지와 텍스트를 가로로 나란히 배치 */
+    align-items: center; /* 체크 이미지와 텍스트를 세로 중앙 정렬 */
+    background-color: #F2F0FD;
+    }
+
+.bb {
+	margin-bottom: 10px;
+	display: flex; /* 체크 이미지와 텍스트를 가로로 나란히 배치 */
+    align-items: center; /* 체크 이미지와 텍스트를 세로 중앙 정렬 */
+    background-color: #F2F0FD;
 }
 
-.plan-price {
-    font-weight: bold;
-    font-size: 23px;
-    color: #643EF8;
+.purpleCheck {
+	width: 12px;
+	margin-top: 5px;
+	margin-left: 18px;
 }
 
-.summary-box {
-    background-color: #f4f2ff; /* 보라색 계열의 연한 배경색 */
-    padding: 20px;
+.longText {
+	color: #434549;
+	font-family:'NanumSquareRoundOTF';
+	font-size: 10px;
+	margin-right:150px;
+	margin-top:5px;
+	margin-left:5px;
+}
+
+.footerText {
+	color: white;
+	font-family:'NanumSquareRoundOTF';
+	font-weight:700;
+	margin-top:-2px;
+	margin-left: 92px;
+}
+
+footer{
+	cursor:pointer;
+	margin-bottom: 20px; 
+	background-color: #643EF8;	
+	border: 1px solid #643EF8;
+	border-radius: 8px;
+	width:335px;
+	height:50px;
+}
+
+<!--세 개의 결제 박스 클릭 시-->
+
+.middlePart > div {
+    border: 1px solid #e0e0e0; /* 기본 테두리 색상 */
     border-radius: 10px;
-    margin-top: 20px; /* 상단 여백 */
-}
-
-.summary-title {
-    font-weight: bold;
-    font-size: 18px;
+    padding: 10px;
     margin-bottom: 10px;
-    margin-left:23px;
-}
-
-.summary-details {
-    font-size: 16px;
-    color: #333;
-    margin-left: 20px; /* 글머리 기호를 위한 공간 */
-}
-
-.payment-button {
-    margin-top: -20px;
-    padding: 15px;
-    background-color: #643EF8;
-    color: #FFFFFF;
-    text-align: center;
-    border-radius: 10px;
     cursor: pointer;
+    transition: border-color 0.3s;
 }
-
-
-.pay-header, .payment-plans, .payment-summary, .payment-button {
-    margin-top: 60px; /* 각 섹션을 아래로 이동 */
+/* 선택된 상태의 박스 스타일 */
+.middlePart > div.selected {
+    border: 2px solid #643EF8; /* 선택된 경우 보라색 테두리 */
 }

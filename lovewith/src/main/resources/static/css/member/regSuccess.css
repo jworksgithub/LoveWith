@@ -1,0 +1,79 @@
+/* container 부분 
+=====================================*/
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.TOP_TXT {
+	margin-bottom: 60px;
+	font-family: 'NanumSquareRoundOTF', sans-serif; /* 폰트 지정 */
+}
+
+.TOP_TXT h3 {
+	width: 100%;
+	height: auto; /* 높이를 고정하지 않고 내용에 따라 조정 */
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 36px;
+	color: #000000;
+	white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.TOP_TXT p {
+	width: 100%;
+	max-width: 335px;
+	height: auto; /* 높이를 고정하지 않고 내용에 따라 조정 */
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+	margin-top: 10px; /* 간격 조절 */
+}
+
+.Frame-816160 {
+	width: 100%;
+	max-width: 270px;
+	height: auto; /* 이미지 비율에 따라 자동 조정 */
+	margin-bottom: 40px; /* 이미지와 버튼들 사이 간격 조정 */
+}
+
+.btn-group {
+	position: fixed;
+	width: 100%;
+	max-width: 335px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 20px; /* 아래쪽에서 20px 위로 위치 */
+	display: flex;
+	flex-direction: column;
+	gap: 10px; /* 버튼 사이의 간격을 10px로 설정 */
+	align-items: center; /* 텍스트 버튼 중앙 정렬 */
+}
+
+.continueBtn {
+	/* 계속하기 버튼 스타일 */
+	width: 100%;
+	height: 52px;
+	padding: 13px 12px;
+	background-color: #643EF8;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.nextBtn {
+	/* 텍스트 버튼 스타일 */
+	background-color: transparent; /* 배경색 제거 */
+	color: #5D6066; /* 텍스트 색상 */
+	border: none; /* 테두리 제거 */
+	font-size: 14px; /* 텍스트 크기 */
+	cursor: pointer; /* 클릭 가능한 커서 */
+	padding: 0; /* 기본 패딩 제거 */
+	width: auto;
+	height: auto;
+}

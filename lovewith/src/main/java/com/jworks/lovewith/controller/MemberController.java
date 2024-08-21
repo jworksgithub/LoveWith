@@ -12,74 +12,77 @@ public class MemberController {
 	 * ======================= 회원로그인 =======================
 	 */
 	// 03로그인_01
-	@GetMapping("/member/memberLogin.do")
+	@GetMapping("/views/member/login.do")
 	public String formLogin() throws Exception {
-		return "member/memberLogin";
+		return "/views/member/login.html";
+		/*
+		 * return "views/member/memberLogin";
+		 */
 	}
 
 	// 03로그인_02이용약관
-	@GetMapping("/member/memberAgreement.do")
+	@GetMapping("/views/member/agreement.do")
 	public String Agreement() throws Exception {
-		return "member/memberAgreement";
+		return "/views/member/agreement.html";
 	}
 
 	// 04회원가입_01이메일인증_01이메일입력
-	@GetMapping("/member/memberEmailCertification.do")
+	@GetMapping("/views/member/emailCertification.do")
 	public String EmailCertification() throws Exception {
-		return "member/memberEmailCertification";
+		return "/views/member/emailCertification.html";
 	}
 
 	// 03회원가입_01이메일인증_02인증메일전송
-	@GetMapping("/member/memberSendEmail.do")
+	@GetMapping("/views/member/sendingEmail.do")
 	public String SendEmail() throws Exception {
-		return "member/memberSendEmail";
+		return "/views/member/sendingEmail.html";
 	}
 
 	// 03회원가입_01이메일인증_03이름입력
-	@GetMapping("/member/memberNmRegister.do")
+	@GetMapping("/views/member/nmRegister.do")
 	public String NmRegister() throws Exception {
-		return "member/memberNmRegister";
+		return "/views/member/nmRegister.html";
 	}
 
 	// 04회원가입_02휴대폰번호인증_01번호입력
-	@GetMapping("/member/memberPhoneCertification.do")
+	@GetMapping("/views/member/phoneCertification.do")
 	public String PhoneCertification() throws Exception {
-		return "member/memberPhoneCertification";
+		return "/views/member/phoneCertification.html";
 	}
 
 	// 04회원가입_02휴대폰번호인증_02인증코드입력
-	@GetMapping("/member/memberSendPhone.do")
+	@GetMapping("/views/member/sendingPhone.do")
 	public String SendPhone() throws Exception {
-		return "member/memberSendPhone";
+		return "/views/member/sendingPhone.html";
 	}
 
 	// 04회원가입_03가입완료2
-	@GetMapping("/member/memberSuccess.do")
+	@GetMapping("/views/member/regSuccess.do")
 	public String Success() throws Exception {
-		return "member/memberSuccess";
+		return "/views/member/regSuccess.html";
 	}
 
-	// 04회원가입_04연인정보검색_01휴대폰검색_01입력전
-	@GetMapping("/member/loverInformationSearch.do")
-	public String loverInformationSearch() throws Exception {
-		return "member/loverInformationSearch";
+	// 04회원가입_04연인정보검색_01휴대폰검색
+	@GetMapping("/views/member/searchForLoverPhone.do")
+	public String searchForLoverPhone() throws Exception {
+		return "/views/member/searchForLoverPhone.html";
 	}
 
 	/*
 	 * ======================= 마이페이지 =======================
 	 */
-	@GetMapping("/member/myPage.do")
+	@GetMapping("/views/member/myPage.do")
 	public String myPage() {
-		return "member/myPage";
+		return "/views/member/myPage.html";
 	}
 
-	@GetMapping("/member/payUnlimited")
+	@GetMapping("/views/member/payUnlimited.do")
 	public String payUnlimited() {
-		return "member/payUnlimited";
+		return "/views/member/payUnlimited.html";
 	}
 
-	@GetMapping("/member/payAnnual")
+	@GetMapping("/views/member/payAnnual.do")
 	public String payAnnual() {
-		return "member/payAnnual";
+		return "/views/member/payAnnual.html";
 	}
 }

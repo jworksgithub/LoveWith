@@ -4,9 +4,9 @@ spring:
   profiles:
     active: local #local,dev,real
   mvc:
-    view: #view 경로 및 확장자 지정
-      prefix: /WEB-INF/views/
-      suffix: .jsp
+    #view: #view 경로 및 확장자 지정
+      #prefix: /WEB-INF/views/
+      #suffix: .jsp
     pathmatch:
       matching-strategy: ant_path_matcher
   datasource: #DB 접속

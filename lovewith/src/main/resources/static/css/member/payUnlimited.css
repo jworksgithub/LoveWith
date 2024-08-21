@@ -1,12 +1,4 @@
-body{
-	border: 1px solid Red;
-	
-}
-
-header, footer{
-	border: 1px solid Red;
-}
-header, html{
+html, body {
 	background-color: #FAFAFC;
 }
 .container{

@@ -27,7 +27,7 @@
 
 /* 레이아웃 확인용 
 body {
-	border: 1px solid Red;
+	border: 1px solid black;
 }
 
 header, footer, .container {
@@ -48,11 +48,6 @@ body {
 	flex-direction: column;
 }
 
-.container {
-	width: 100%;
-	flex: 1; /* container가 남은 공간을 차지하도록 설정 */
-}
-
 header, footer {
 	width: 100%;
 	max-width: 375px;
@@ -69,6 +64,11 @@ header {
 
 footer {
 	bottom: 0;
+}
+
+.container {
+	width: 100%;
+	flex: 1; /* container가 남은 공간을 차지하도록 설정 */
 }
 
 /* 뒤로가기 버튼 */
